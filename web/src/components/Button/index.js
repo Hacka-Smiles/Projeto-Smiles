@@ -29,7 +29,9 @@ const ButtonDefault = styled.button `
 export default function Button() {
     return (
        <>
-            <ButtonDefault> teste </ButtonDefault>
+            <ButtonDefault> 
+              teste
+               </ButtonDefault>
        </>
     );
 }
