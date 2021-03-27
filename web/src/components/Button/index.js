@@ -26,12 +26,10 @@ const ButtonDefault = styled.button `
 `;
 
 
-export default function Button() {
+export default function Button({url, alt}) {
     return (
        <>
-            <ButtonDefault> 
-              teste
-               </ButtonDefault>
+            <ButtonDefault alt={alt}>  teste </ButtonDefault>
        </>
     );
 }
