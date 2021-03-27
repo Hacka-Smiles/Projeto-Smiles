@@ -1,0 +1,40 @@
+{
+    "title": "",
+    "description": "",
+    "bg": "",
+    "questions": [
+        {
+          "image": "",
+          "title": "",
+          "description": "",
+          "answer": "",
+          "explanation": [
+            ""
+          ],
+          "source": [{
+            "title": "",
+            "url": ""
+
+          }],
+          "alternatives": [
+            "",
+            ""
+          ]
+        }
+      ],
+    "external": [
+        "",
+        ""
+    ],
+    "theme": {
+        "colors": {
+            "primary": "#00bcd4",
+            "secondary": "#aeea00",
+            "mainBg": "#161a40",
+            "contrastText": "#000",
+            "wrong": "#bc0057",
+            "success": "#64dd17"
+        },
+        "borderRadius": "4px"
+    }
+}
