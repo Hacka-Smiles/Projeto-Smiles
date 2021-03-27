@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
+const ButtonDefault = styled.button `
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.contrastText};
   border-radius: ${({ theme }) => theme.borderRadius};
@@ -25,4 +25,11 @@ const Button = styled.button`
   }
 `;
 
-export default Button;
+
+export default function Button() {
+    return (
+       <>
+            <ButtonDefault> teste </ButtonDefault>
+       </>
+    );
+}
