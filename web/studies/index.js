@@ -37,16 +37,31 @@ export default function Button({alt, url, ...props}) {
     const [variavelEstado, setVariavelEstado] = useState("inicial");
     const [infoAtivo, setInfoAtivo] = useState("inativo");
     const [outraVariavelEstado, setOutraVariavelEstado] = useState("outra");
-   
+    
+    useEffect(() => {
+        setVariavelEstado("renderizou uma unica vez")
+    }, []);
+
+    useEffect(() => {
+        setVariavelEstado("renderizou depois que o variavelEstado mudou")
+
+    }, [variavelEstado]);
+
+    // function handleClick() {
+    //     setInfoAtivo("ativo");
+    // }
     const router = useRouter()
     const handleClick = (e) => {
       e.preventDefault()
       router.push(url)
     }
-    
     return (
        <>
             <ButtonDefault alt={alt} onClick={(e) => handleClick(e)} className={infoAtivo} url={url}>testando</ButtonDefault>
+            {/* <ButtonDefault alt={alt} >testando</ButtonDefault> */}
+            {/* <p>{variavelEstado}</p> */}
+            {/* <p>{infoAtivo}</p> */}
+            {/* <Link href="/checkout"/> */}
        </>
     );
 }
