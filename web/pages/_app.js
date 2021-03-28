@@ -21,6 +21,9 @@ const GlobalStyle = createGlobalStyle`
   p {
     margin: 0px 0 10px;
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   /* h1 {
     font-size: 30px;
   } */
