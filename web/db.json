@@ -39,5 +39,24 @@
             "image": "/pcd.jpg",
             "url": "/"
         }
+    ],
+    "destinos": [
+        {
+            "local": "Empresa de Cão Guia",
+            "descricao": "Precisa de um cão guia na hora de viajar? Seu lugar é com a gente!",
+            "nota": "3.5",
+            "image": "/pcd.jpg",
+            "acessibilidade": [
+                {
+                    "tipo": "Deficientes Visuais",
+                    "rating": "5"
+                },
+                {
+                    "tipo": "Deficientes Auditivos",
+                    "rating": "4"
+                }
+            ],
+            "rating": "2"
+        }
     ]
 }

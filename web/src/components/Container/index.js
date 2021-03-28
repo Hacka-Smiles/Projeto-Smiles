@@ -49,6 +49,20 @@ Container.Block = styled.div`
     flex-direction: column;
   }
 `
-
+Container.Form = styled.div`
+  position: relative;
+  margin: 30px auto;
+  height: auto;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  
+  .input-container {
+    width: 100%;
+  }
+  @media(max-width: 600px) {
+    flex-direction: column;
+  }
+`
 
 export default Container;
