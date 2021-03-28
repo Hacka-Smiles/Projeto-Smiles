@@ -17,11 +17,10 @@ const InputDefault = styled.input`
   text-transform: uppercase;
   outline: 0;
   transition: .3s;
-  margin-top: 25px;
   cursor: pointer;
   &:hover,
   &:focus {
-  
+  opacity:0.8
   }
   &:disabled {
     background-color: #979797;
@@ -35,7 +34,7 @@ export default function Input({ placeholder, imgUrl, type,  ...props }) {
   <div className="input-container">
   <InputDefault placeholder={placeholder} type={type}>
   </InputDefault>
-  <img className="teste" src="https://picsum.photos/200"></img>
+  <img className="teste" src={imgUrl}></img>
 </div>
   </>
   );

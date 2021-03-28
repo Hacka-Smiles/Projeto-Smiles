@@ -14,7 +14,9 @@ export default function Home() {
     <>
       <Title>My page</Title>
       <Button text="enviar" href="/checkout" type="link">oi</Button>
-      <Input placeholder="Digite o seu e-mail" type="text"/>
+      <Input imgUrl="https://picsum.photos/200" placeholder="Digite o seu e-mail" type="text"/>
+      <Input imgUrl="https://picsum.photos/200" placeholder="Digite o seu e-mail" type="text"/>
+
     </>
   );
 }
