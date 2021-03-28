@@ -7,15 +7,17 @@ export default function Home() {
   return (
     <>
       <Banner 
-        img_src="/bannerum.jpg" 
+        img_src="/bannerum.jpg"
+        img_alt="Banner principal"
+        img_title="Banner principal" 
         width="600px" 
         height="auto" 
         title={db.title} 
         subtitle={db.description} 
-        button1_href={"/entrar"} 
-        button2_href={"/cadastrar"} 
         button1_text={"Entrar"}
+        button1_href={"/entrar"}
         button2_text={"Cadastrar"}
+        button2_href={"/cadastrar"}
         />
     </>
   );

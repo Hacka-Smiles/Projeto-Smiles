@@ -55,21 +55,21 @@ margin-top: 10px;
 
 
 
-export default function Banner({img_src, width, height, title, subtitle, button1_href, button2_href, button1_text, button2_text}) {
+export default function Banner({img_src, img_alt, img_title, width, height, title, subtitle, button1_href, button2_href, button1_text, button2_text}) {
   return (
     <>
     <BannerDefault >
       {/* <img src={img_src} width={width} height={height}/> */}
       <div className="container">
         <div className="container__box">
-          <h1>{title}</h1>
-          <h2>{subtitle}</h2>
+          <h1>{title !== undefined ? title : null}</h1>
+          <h2>{subtitle !== undefined ? subtitle : null}</h2>
           <div className="container__buttons"> 
-            <Button href={button1_href} type="link" text={button1_text}/>
-            <Button href={button2_href} type="link" text={button2_text}/>
+          { button1_href !== undefined && button1_text !== undefined ? <Button href={button1_href} type="link" text={button1_text}/> : null}
+          { button2_href !== undefined && button2_text !== undefined ? <Button href={button2_href} type="link" text={button2_text}/> : null}
           </div>
         </div>
-        <img src={img_src} width={width} height={height}/>
+        <img src={img_src} width={width} height={height} img_alt={img_alt} img_title={img_title}/>
       </div>
     </BannerDefault>
     </>
