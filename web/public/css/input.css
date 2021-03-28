@@ -3,8 +3,8 @@
     margin-top:30px;
 }
 
-.input-container img{
-    width: 30px;
+.input-container svg{
+    width: 20px;
     position: absolute;
     right: 5%;
     top:50%;

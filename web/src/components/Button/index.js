@@ -7,10 +7,10 @@ const ButtonDefault = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.borderRadius};
-  border: 0;
-  padding: 18px 20px;
+  border: 0;  
+  padding: 18px 70px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1;
   text-transform: uppercase;
   outline: 0;
