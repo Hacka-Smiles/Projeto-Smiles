@@ -3,11 +3,11 @@ import styled from 'styled-components';
 // Inputs: text, search, etc
 // Icone (opcional)
 
-const Input = styled.button`
-  background-color: ${({ theme }) => theme.colors.secondary};
+const InputDefault = styled.input`
+  background-color: transparent;
   color: ${({ theme }) => theme.colors.contrastText};
   border-radius: ${({ theme }) => theme.borderRadius};
-  border: 0;
+  border: 2px solid ${({ theme }) => theme.colors.primary};
   width: 100%;
   padding: 10px 16px;
   font-weight: bold;
@@ -20,7 +20,7 @@ const Input = styled.button`
   cursor: pointer;
   &:hover,
   &:focus {
-    opacity: .5;
+  
   }
   &:disabled {
     background-color: #979797;
@@ -28,4 +28,14 @@ const Input = styled.button`
   }
 `;
 
-export default Input;
+export default function Input({ placeholder, imgUrl, type,  ...props }) {
+  return(
+  <>
+  <div>
+  <InputDefault placeholder={placeholder} type={type}>
+  </InputDefault>
+  <i className="far fa-envelope-open"></i>
+</div>
+  </>
+  );
+}

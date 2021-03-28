@@ -3,6 +3,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import db from '../../db.json';
 import Button from '../../src/components/Button';
+import Banner from '../../src/components/Banner';
 
 export default function Navegar() {
   return (
@@ -11,6 +12,7 @@ export default function Navegar() {
         externalQuestions={db.questions}
         externalBg={db.bg}
       /> */}
+      {/* <Banner img={""}></Banner> */}
       <Button>Login</Button>
     </ThemeProvider>
   );

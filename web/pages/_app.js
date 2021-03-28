@@ -17,6 +17,10 @@ const GlobalStyle = createGlobalStyle`
     // Branco no começo
     color: ${({ theme }) => theme.colors.contrastText};
   }
+
+  /* h1 {
+    font-size: 30px;
+  } */
 `;
 
 const { theme } = db;
