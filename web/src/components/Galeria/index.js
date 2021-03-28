@@ -32,10 +32,6 @@ export default function Galeria({imgArray, ...props}){
     </div>
     <div className="swiper-pagination swiper-pagination1"></div>
   </div>
-
-    <h2>Nome da pessoa</h2>
-
-  <Navbar page="perfil"></Navbar>
       </>
     );
 }

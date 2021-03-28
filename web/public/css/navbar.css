@@ -15,6 +15,7 @@
 
 .navbar li{
     padding: 35px;
+    cursor: pointer;
 }
 
 .navbar li.active{

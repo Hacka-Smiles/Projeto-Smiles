@@ -5,6 +5,10 @@ import db from '../../db.json';
 import Button from '../../src/components/Button';
 import Navbar from '../../src/components/Navbar';
 import Galeria from '../../src/components/Galeria';
+import IconeTexto from '../../src/components/IconeETexto';
+import { faEnvelopeOpen, faHighlighter } from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 export default function Perfil() {
@@ -13,6 +17,12 @@ export default function Perfil() {
   return (
     <>
     <Galeria imgArray={imgArray}></Galeria>
+    <div className="nome-cliente">
+         <h2>João da silva sauro</h2>
+    </div>
+
+    <Navbar page="perfil"></Navbar>
+    <IconeTexto icone={faEnvelopeOpen} text="Atributo de teste"></IconeTexto>
     </>
   );
 }
