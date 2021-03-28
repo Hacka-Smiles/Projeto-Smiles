@@ -6,3 +6,19 @@
 .padding-box{
     padding: 30px;
 }
+
+.prestador-titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating{
+    display: flex;
+    align-items: center;
+}
+
+.rating svg{
+    width: 20px;
+    margin: 0 10px;
+}
