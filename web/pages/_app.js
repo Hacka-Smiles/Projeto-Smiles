@@ -19,10 +19,13 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.bg};
   }
   p {
-    margin: 0px 0 10px;
+    margin: 0px 0 20px;
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .margin-0-auto {
+    margin: 0 auto;
   }
   /* h1 {
     font-size: 30px;

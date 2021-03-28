@@ -37,6 +37,11 @@ const BannerDefault = styled.div`
       content: "";
       /* position: absolute; */
       width: 100%;
+      
+      max-width: ${(props) => props.orientation === "initial" ? "330px" : "unset"};
+      @media(max-width: 768px) {
+        max-width: unset;
+      }
       height: auto;
       padding: 0 20px 0 20px;
       background: black;
@@ -79,6 +84,7 @@ const BannerDefault = styled.div`
       object-fit: cover;
       width: auto;
       max-width: 100%;
+      overflow: hidden;
     }
   }
 `;
