@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
+
 // Inputs: text, search, etc
 // Icone (opcional)
 
 const InputDefault = styled.input`
-  background-color: ${({ theme }) => theme.colors.secondary};
+  background-color: transparent;
   color: ${({ theme }) => theme.colors.contrastText};
   border-radius: ${({ theme }) => theme.borderRadius};
-  border: 0;
+  border: 2px solid ${({ theme }) => theme.colors.primary};
   width: 100%;
   padding: 10px 16px;
   font-weight: bold;
@@ -16,13 +17,10 @@ const InputDefault = styled.input`
   text-transform: uppercase;
   outline: 0;
   transition: .3s;
-  margin-top: 25px;
   cursor: pointer;
   &:hover,
   &:focus {
-    :placeholder{
-      opacity:0.5;
-    };
+  opacity:0.8
   }
   &:disabled {
     background-color: #979797;
@@ -33,11 +31,11 @@ const InputDefault = styled.input`
 export default function Input({ placeholder, imgUrl, type,  ...props }) {
   return(
   <>
-  <div>
+  <div className="input-container">
   <InputDefault placeholder={placeholder} type={type}>
   </InputDefault>
-   <img src="" alt="teste"></img>
-  </div>
+  <img className="teste" src={imgUrl}></img>
+</div>
   </>
   );
 }

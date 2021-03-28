@@ -1,6 +1,8 @@
-import styled from 'styled-components';
-import Button from '../src/components/Button'
+import styled from 'styled-components'
+import Button from '../src/components/Banner'
 import Input from '../src/components/Input'
+
+
 
 import { useRouter } from 'next/router';
 const Title = styled.h1`
@@ -13,8 +15,11 @@ export default function Home() {
   return (
     <>
       <Title>My page</Title>
-      <Button href="/checkout" type="link">oi</Button>
-      <Input type="text"/>
+      <Button text="enviar" href="/checkout" type="link">oi</Button>
+      <Input imgUrl="https://picsum.photos/200" placeholder="Digite o seu e-mail" type="text"/>
+      <Input imgUrl="https://picsum.photos/200" placeholder="Digite o seu e-mail" type="text"/>
+
     </>
   );
+
 }
