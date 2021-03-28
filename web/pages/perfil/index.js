@@ -8,12 +8,11 @@ import Galeria from '../../src/components/Galeria';
 
 
 export default function Perfil() {
-  let imgArray =  ['https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300'];
+  let imgArray =  ['https://picsum.photos/500/300', 'https://picsum.photos/500/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300'];
 
   return (
     <>
     <Galeria imgArray={imgArray}></Galeria>
-    <Navbar page="perfil"></Navbar>
     </>
   );
 }
