@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 // Inputs: text, search, etc
 // Icone (opcional)
 
@@ -31,10 +32,10 @@ const InputDefault = styled.input`
 export default function Input({ placeholder, imgUrl, type,  ...props }) {
   return(
   <>
-  <div>
+  <div className="input-container">
   <InputDefault placeholder={placeholder} type={type}>
   </InputDefault>
-  <i className="far fa-envelope-open"></i>
+  <img className="teste" src="https://picsum.photos/200"></img>
 </div>
   </>
   );

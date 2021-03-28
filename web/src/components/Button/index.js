@@ -31,7 +31,7 @@ const ButtonDefault = styled.button`
 `;
 
 
-export default function Button({ alt, href, type, ...props }) {
+export default function Button({text, alt, href, type, ...props }) {
   const [variavelEstado, setVariavelEstado] = useState("inicial");
   const [infoAtivo, setInfoAtivo] = useState("inativo");
   const [outraVariavelEstado, setOutraVariavelEstado] = useState("outra");
@@ -46,7 +46,7 @@ export default function Button({ alt, href, type, ...props }) {
   if (type = 'link') {
     return (
       <>
-        <ButtonDefault alt={alt} onClick={(e) => linkTo(e, href, router)} className={infoAtivo} href={href}>testando</ButtonDefault>
+        <ButtonDefault alt={alt} onClick={(e) => linkTo(e, href, router)} className={infoAtivo} href={href}>{text}</ButtonDefault>
       </>
     );
   }

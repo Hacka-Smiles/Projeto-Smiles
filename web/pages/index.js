@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Title>My page</Title>
-      <Button href="/checkout" type="link">oi</Button>
+      <Button text="enviar" href="/checkout" type="link">oi</Button>
       <Input placeholder="Digite o seu e-mail" type="text"/>
     </>
   );
