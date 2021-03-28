@@ -1,0 +1,11 @@
+.icone-texto-container{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+
+.icone-texto-container img{
+    width: 30px;
+    margin-right: 20px;
+}
