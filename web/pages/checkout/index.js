@@ -2,7 +2,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import db from '../../db.json';
-import Button from '../../src/components/Button';
 
 export default function Checkout() {
   return (
@@ -11,7 +10,6 @@ export default function Checkout() {
         externalQuestions={db.questions}
         externalBg={db.bg}
       /> */}
-      <Button>Login</Button>
     </ThemeProvider>
   );
 }
