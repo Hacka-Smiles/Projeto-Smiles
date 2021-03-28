@@ -5,6 +5,13 @@ import db from '../../db.json';
 import Button from '../../src/components/Button';
 
 export default function Estabelecimento() {
+  const data = new FormData();
+
+  data.append("", );
+  data.append("", );
+
+  await api.post('/', data);
+
   return (
     <ThemeProvider theme={db.theme}>
       {/* <QuizScreen
