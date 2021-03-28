@@ -15,9 +15,12 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     font-family: 'Lato, sans-serif';
     // Branco no começo
-    color: ${({ theme }) => theme.colors.contrastText};
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.bg};
   }
-
+  p {
+    margin: 0px 0 10px;
+  }
   /* h1 {
     font-size: 30px;
   } */

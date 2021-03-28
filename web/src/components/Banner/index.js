@@ -3,7 +3,7 @@ import Button from '../../../src/components/Button';
 
 // Titulo e subtitulo (opcional)
 const BannerDefault = styled.div`
-
+  max-width: ${(props) => props.width};
   .container {
     position: relative;
     /* width: 30%; */
@@ -62,7 +62,7 @@ const BannerDefault = styled.div`
     }
 
     img {
-      /* max-width: 300px; */
+      object-fit: cover;
     }
   }
 `;
@@ -70,10 +70,10 @@ const BannerDefault = styled.div`
 
 
 
-export default function Banner({img_src, img_alt, img_title, width, height, title, subtitle, button1_href, button2_href, button1_text, button2_text}) {
+export default function Banner({img_src, img_alt, img_title, img_width, width, height, title, subtitle, button1_href, button2_href, button1_text, button2_text, ...props}) {
   return (
     <>
-    <BannerDefault >
+    <BannerDefault width={width}>
       <div className="container">
         <div className="container__box">
           <h1>{title !== undefined ? title : null}</h1>
@@ -83,7 +83,7 @@ export default function Banner({img_src, img_alt, img_title, width, height, titl
           { button2_href !== undefined && button2_text !== undefined ? <Button href={button2_href} type="link" text={button2_text}/> : null}
           </div>
         </div>
-        <img src={img_src} width={width} height={height} img_alt={img_alt} img_title={img_title}/>
+        <img src={img_src} width={img_width} height={height} img_alt={img_alt} img_title={img_title}/>
       </div>
     </BannerDefault>
     </>
