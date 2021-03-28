@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelopeOpen, faHighlighter } from '@fortawesome/free-solid-svg-icons';
+
+library.add(
+  faEnvelopeOpen 
+  // more icons go here
+);
 
 // Inputs: text, search, etc
 // Icone (opcional)
@@ -14,7 +22,6 @@ const InputDefault = styled.input`
   font-weight: bold;
   font-size: 14px;
   line-height: 1;
-  text-transform: uppercase;
   outline: 0;
   transition: .3s;
   cursor: pointer;
@@ -28,13 +35,13 @@ const InputDefault = styled.input`
   }
 `;
 
-export default function Input({ placeholder, imgUrl, type,  ...props }) {
+export default function Input({ placeholder, icone, type,  ...props }) {
   return(
   <>
   <div className="input-container">
   <InputDefault placeholder={placeholder} type={type}>
   </InputDefault>
-  <img className="teste" src={imgUrl}></img>
+  <FontAwesomeIcon icon={icone} style={{color: 'red'}} />
 </div>
   </>
   );
