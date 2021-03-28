@@ -10,6 +10,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpen, faStar } from '@fortawesome/free-solid-svg-icons';
 
+import Cookies from 'js-cookie';
+
+
 library.add(
   faEnvelopeOpen,
   faStar
@@ -17,9 +20,13 @@ library.add(
 );
 
 
-
+function setSession(chave, valor){
+  Cookies.set(chave, valor)
+}
 
 export default function Estabelecimento() {
+
+  setSession('token','teste');
   
   let imgArray =  ['https://picsum.photos/500/300', 'https://picsum.photos/500/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300'];
   let mapsLink = `https://maps.google.com/maps?q=35.856737, 10.606619&z=15&output=embed`;

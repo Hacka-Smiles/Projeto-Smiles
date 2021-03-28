@@ -1,9 +1,7 @@
-//API DE AUTENTICAÇÃO
-
 import axios from "axios";
 
-const api = axios.create({
+const apiCarrinho = axios.create({
   baseURL: "https://projeto-smiles.herokuapp.com/",
 });
 
-export default api;
+export default apiCarrinho;
