@@ -11,10 +11,8 @@ export default function Cadastrar() {
   // const [flowid, setFlowid] = useState("");
 
   const obj = {
-    userName: "Bobby",
-    usuario: "Robertinho",
-    senha: "123",
-    flowid: "12345",
+    idCliente: "123",
+    token: "NuT5pwsVtfkT1zNeadcQmtfZim-PuMGm"
   };
 
   return (
