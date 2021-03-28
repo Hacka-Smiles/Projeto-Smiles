@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Button from '../../../src/components/Button';
 
 // Titulo e subtitulo (opcional)
-const BannerDefault = styled.div`
+const BannerDefault = styled(BannerDefault)`
   .container {
     position: relative;
     width: 30%;
@@ -39,9 +39,6 @@ const BannerDefault = styled.div`
     }
   }
 `;
-
-
-
 
 export default function Banner({img_src, width, height, title, subtitle, button1_href, button2_href}) {
   return (
