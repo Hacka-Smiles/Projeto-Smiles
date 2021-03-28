@@ -25,4 +25,9 @@ const IconeETexto = styled.button`
   }
 `;
 
-export default IconeETexto;
+export default function IconeTexto({text, alt, href, type, ...props }) {
+  return(
+    <>
+    </>
+  );
+}
