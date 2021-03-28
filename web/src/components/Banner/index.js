@@ -1,44 +1,62 @@
 import styled from 'styled-components';
-import db from '../../../db.json';
 import Button from '../../../src/components/Button';
 
 // Titulo e subtitulo (opcional)
 const BannerDefault = styled.div`
-  position: relative;
-  /* width: 100%; */
-  &::after{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* background-color: #000; */
-    background: linear-gradient(to right, black, transparent);
-    /* opacity: 0.4; */
-    top: 0;
-    left: 0;
-  }
-  img {
-    background-size: cover;
-    /* position: absolute;
-    top: 0;
-    left: 0; */
-  }
-  h1 {
-    position: absolute;
-    top: 50%;
-    color: white;
+  .container {
+    position: relative;
+    width: 30%;
+    height: auto;
+
+    &__box{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding-left: 30px;
+      background: black;
+      top: 0;
+      left: 0;
+    }
+    &__buttons {
+      width:
+      display: flex;
+      justify-content: space-between;
+    }
+    h1, h2 {
+      color: white;
+    }
+    h1 {
+      font-size: 60px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 25px;
+    }
+
   }
 `;
 
-export default function Banner({img_src, width, height}) {
+export default function Banner({img_src, width, height, title, subtitle, button1_href, button2_href}) {
   return (
     <>
     <BannerDefault>
       {/* <img src={img_src} width={width} height={height}/> */}
-      <img src={img_src} />
-      <h1>{db.title}</h1>
-      <h2>{db.subtitle}</h2>
-      <Button href="/checkout" type="link">oi</Button>
+      <div className="container">
+        <div className="container__box">
+          <h1>{title}</h1>
+          <h2>{subtitle}</h2>
+          <div className="container__buttons"> 
+            <Button href="/entrar" type="link">oi</Button>
+            <Button href="/cadastrar" type="link">oi</Button>
+          </div>
+        </div>
+        <img src={img_src} />
+      </div>
     </BannerDefault>
     </>
   );
