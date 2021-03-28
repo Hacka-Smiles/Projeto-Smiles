@@ -1,24 +1,29 @@
 import styled from 'styled-components'
-import Button from '../src/components/Banner'
-import Input from '../src/components/Input'
-
-
-
-import { useRouter } from 'next/router';
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+import db from '../db.json';
+import Banner from '../src/components/Banner';
+import Container from '../src/components/Container';
 
 export default function Home() {
 
   return (
     <>
-      <Title>My page</Title>
-      <Button text="enviar" href="/checkout" type="link">oi</Button>
-      <Input imgUrl="https://picsum.photos/200" placeholder="Digite o seu e-mail" type="text"/>
-      <Input imgUrl="https://picsum.photos/200" placeholder="Digite o seu e-mail" type="text"/>
-
+    <Container>
+      <div className="center bg-dark-gray">
+      <Banner 
+        img_src="/bannerum.jpg"
+        img_alt="Banner principal"
+        img_title="Banner principal" 
+        width="600px" 
+        height="auto" 
+        title={db.title} 
+        subtitle={db.description} 
+        button1_text={"Entrar"}
+        button1_href={"/entrar"}
+        button2_text={"Cadastrar"}
+        button2_href={"/cadastrar"}
+        />
+      </div>
+    </Container>
     </>
   );
 

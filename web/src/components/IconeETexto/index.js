@@ -25,4 +25,12 @@ const IconeETexto = styled.button`
   }
 `;
 
-export default IconeETexto;
+export default function IconeTexto({text, urlImg, ...props }) {
+  return(
+    <>
+    <div className="icone-texto-container">
+    <img src={urlImg}></img> <span>{text}</span>
+    </div>
+    </>
+  );
+}

@@ -4,7 +4,30 @@ import { useRouter } from 'next/router';
 import servicosParaCliente from '../../services/clientServices';
 
 const ButtonDefault = styled.button`
-  
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  border: 0;
+  padding: 18px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  outline: 0;
+  transition: .3s;
+  margin-top: 25px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
+  &:disabled {
+    background-color: #979797;
+    cursor: not-allowed;
+  }
+  &.ativo {
+      background-color: black;
+  }
 `;
 
 
