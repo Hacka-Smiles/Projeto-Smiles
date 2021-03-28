@@ -3,6 +3,7 @@ import Button from '../Button';
 
 // Titulo e subtitulo (opcional)
 const BlocoTextoDefault = styled.div`
+    width: ${(props) => props.width};
     display: flex;
     justify-content:center;
     flex-direction:column;

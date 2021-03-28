@@ -1,5 +1,5 @@
 {
-    "title": "Nome da empresa",
+    "title": "Comunidade Smiles",
     "description": "Conectando pessoas e eliminando barreiras",
     "theme": {
         "bg": "#191a1d",
@@ -13,5 +13,31 @@
             "white": "#ffffff"
         },
         "borderRadius": "100px"
-    }
+    },
+    "funcionalidades": [
+        {
+            "title": "Planejador de Viagens",
+            "subtitle": "Não sabe pra onde quer ir? Quais pontos turísticos conhecer? Use nossa ferramenta de planejamento personalizada.",
+            "image": "/smilesapp.jpg",
+            "url": "/teste"
+        },
+        {
+            "title": "A Comunidade",
+            "subtitle": "Saiba o que as pessoas dizem sobre os lugares que você quer ir e compartilhe sua opinião",
+            "image": "/comunidade.jpg",
+            "url": "/"
+        },
+        {
+            "title": "Guias Turísticos",
+            "subtitle": "É PCD? Conte com o auxílio de guias turísticos locais para explorar tudo que seu destino tem a oferecer.",
+            "image": "/smilesapp.jpg",
+            "url": "/"
+        },
+        {
+            "title": "Compromisso com PCDs",
+            "subtitle": "Saiba como tornamos as viagens mais acessíveis",
+            "image": "/smilesapp.jpg",
+            "url": "/"
+        }
+    ]
 }
