@@ -21,6 +21,8 @@ export default function Entrar() {
       <Input imgUrl="https://picsum.photos/200" placeholder="Digite o seu e-mail" type="text"/>
 
       <IconeTexto text="Texto de testezi" urlImg="https://picsum.photos/id/237/200/300"></IconeTexto>
+
+      
     </>
   );
 
