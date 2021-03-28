@@ -10,31 +10,33 @@ export default class clientServices{
     
     async getLoginAPI(params) {
         console.log("Estabelecendo conexão com o servidor...");
-        var aux = 0;
+        var auxResponse = 0;
     
         await api
         .get(`login/${params.userName}?usuario=${params.usuario}&senha=${params.senha}&flowid=${params.flowid}`)
         .then((response) => {
-            console.log(response);
-            aux = response.status;
+            auxResponse = response.status;
         })
         .catch((error) => {
             console.log(error);
         });
 
-        return aux;
+        return auxResponse;
     }
   
     async postClientToAPI(){
         console.log("Estabelecendo conexão com o servidor...");
+        var auxResponse = 0;
     
         await api
         .get(`login/${params.userName}?usuario=${params.usuario}&senha=${params.senha}&flowid=${params.flowid}`)
         .then((response) => {
-            console.log("Resposta da API: " + response);
+            auxResponse = response.status;
         })
         .catch((error) => {
             console.log(error);
         });
+        
+        return auxResponse;
     }
 }
