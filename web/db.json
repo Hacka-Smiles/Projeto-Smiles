@@ -4,13 +4,14 @@
     "bg": "",
     "theme": {
         "colors": {
-            "primary": "#00bcd4",
+            "primary": "#ff5a00",
             "secondary": "#aeea00",
             "mainBg": "#161a40",
             "contrastText": "#000",
             "wrong": "#bc0057",
-            "success": "#64dd17"
+            "success": "#64dd17",
+            "white": "#ffffff"
         },
-        "borderRadius": "4px"
+        "borderRadius": "100px"
     }
 }

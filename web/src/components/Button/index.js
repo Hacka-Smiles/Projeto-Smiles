@@ -1,15 +1,13 @@
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
-import Link from '../Link';
 import { useRouter } from 'next/router';
 
-const ButtonDefault = styled.button `
-  background-color: ${({ theme }) => theme.colors.secondary};
-  color: ${({ theme }) => theme.colors.contrastText};
+const ButtonDefault = styled.button`
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.borderRadius};
   border: 0;
-  width: 100%;
-  padding: 10px 16px;
+  padding: 18px 20px;
   font-weight: bold;
   font-size: 14px;
   line-height: 1;
@@ -33,20 +31,24 @@ const ButtonDefault = styled.button `
 `;
 
 
-export default function Button({alt, url, ...props}) {
-    const [variavelEstado, setVariavelEstado] = useState("inicial");
-    const [infoAtivo, setInfoAtivo] = useState("inativo");
-    const [outraVariavelEstado, setOutraVariavelEstado] = useState("outra");
-   
-    const router = useRouter()
-    const handleClick = (e) => {
-      e.preventDefault()
-      router.push(url)
-    }
-    
+export default function Button({ alt, href, type, ...props }) {
+  const [variavelEstado, setVariavelEstado] = useState("inicial");
+  const [infoAtivo, setInfoAtivo] = useState("inativo");
+  const [outraVariavelEstado, setOutraVariavelEstado] = useState("outra");
+
+  const linkTo = (e, href, router) => {
+    e.preventDefault()
+    router.push(href)
+  }
+
+  const router = useRouter()
+
+  if (type = 'link') {
+
     return (
-       <>
-            <ButtonDefault alt={alt} onClick={(e) => handleClick(e)} className={infoAtivo} url={url}>testando</ButtonDefault>
-       </>
+      <>
+        <ButtonDefault alt={alt} onClick={(e) => linkTo(e, href, router)} className={infoAtivo} href={href}>testando</ButtonDefault>
+      </>
     );
+  }
 }
