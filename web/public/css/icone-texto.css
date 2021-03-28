@@ -1,11 +1,15 @@
 .icone-texto-container{
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    margin: 20px 20px;
 }
 
 
-.icone-texto-container img{
+.icone-texto-container svg{
     width: 30px;
     margin-right: 20px;
+}
+
+.icone-texto-container span{
+    font-size: 25px;
 }

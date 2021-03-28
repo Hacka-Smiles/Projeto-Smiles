@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelopeOpen, faHighlighter } from '@fortawesome/free-solid-svg-icons';
+import Button from '../Button';
+
+library.add(
+  faEnvelopeOpen 
+  // more icons go here
+);
+
 const IconeETexto = styled.button`
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.contrastText};
@@ -25,11 +35,12 @@ const IconeETexto = styled.button`
   }
 `;
 
-export default function IconeTexto({text, urlImg, ...props }) {
+export default function IconeTexto({text, icone, ...props }) {
   return(
     <>
     <div className="icone-texto-container">
-    <img src={urlImg}></img> <span>{text}</span>
+    <FontAwesomeIcon icon={icone} style={{color: 'red'}} />
+    <span>{text}</span>
     </div>
     </>
   );

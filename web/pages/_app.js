@@ -15,9 +15,18 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     font-family: 'Lato, sans-serif';
     // Branco no começo
-    color: ${({ theme }) => theme.colors.contrastText};
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.bg};
   }
-
+  p {
+    margin: 0px 0 20px;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .margin-0-auto {
+    margin: 0 auto;
+  }
   /* h1 {
     font-size: 30px;
   } */
@@ -32,6 +41,10 @@ export default function App({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
         <link href="/css/join.css" rel="stylesheet" />
+        <script>
+
+    
+</script>
 
       </Head>
       <ThemeProvider theme={theme}>

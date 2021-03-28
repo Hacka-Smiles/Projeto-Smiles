@@ -12,11 +12,13 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "js-cookie": "^2.2.1",
     "next": "latest",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-is": "^16.8.0",
-    "styled-components": "^5.0.0"
+    "styled-components": "^5.0.0",
+    "swiper": "^6.5.0"
   },
   "devDependencies": {
     "axios": "^0.21.1",

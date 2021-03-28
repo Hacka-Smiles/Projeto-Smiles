@@ -5,15 +5,28 @@ import db from '../../db.json';
 import Button from '../../src/components/Button';
 import Navbar from '../../src/components/Navbar';
 import Galeria from '../../src/components/Galeria';
+import IconeTexto from '../../src/components/IconeETexto';
+import { faEnvelopeOpen, faHighlighter } from '@fortawesome/free-solid-svg-icons';
+
+
 
 
 export default function Perfil() {
-  let imgArray =  ['https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300'];
+  let imgArray =  ['https://picsum.photos/500/300', 'https://picsum.photos/500/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300'];
 
   return (
     <>
     <Galeria imgArray={imgArray}></Galeria>
+    <div className="nome-cliente">
+         <h2>João da silva sauro</h2>
+    </div>
+
     <Navbar page="perfil"></Navbar>
+    <IconeTexto icone={faEnvelopeOpen} text="Atributo de teste"></IconeTexto>
+
+    <div className="button-container">
+      <Button type="link" text="Editar perfil" href="/preferencias"></Button>
+    </div>
     </>
   );
 }

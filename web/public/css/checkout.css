@@ -1,0 +1,26 @@
+.checkout-container{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+.checkout-container .checkout-img-container{
+    height: 200px;
+    overflow: hidden;
+}
+.checkout-container img{
+    width: 100%;
+}
+.checkout-container h4,
+.checkout-container h2,
+.checkout-container span{
+    margin: 30px;
+    color:#000;
+}
+
+.checkout-container span{
+    font-size: 30px;
+    font-weight: bold;
+    margin:0;
+}
