@@ -4,10 +4,10 @@ import styled from 'styled-components';
 // Icone (opcional)
 
 const InputDefault = styled.input`
-  background-color: ${({ theme }) => theme.colors.secondary};
+  background-color: transparent;
   color: ${({ theme }) => theme.colors.contrastText};
   border-radius: ${({ theme }) => theme.borderRadius};
-  border: 0;
+  border: 2px solid ${({ theme }) => theme.colors.primary};
   width: 100%;
   padding: 10px 16px;
   font-weight: bold;
@@ -20,9 +20,7 @@ const InputDefault = styled.input`
   cursor: pointer;
   &:hover,
   &:focus {
-    :placeholder{
-      opacity:0.5;
-    };
+  
   }
   &:disabled {
     background-color: #979797;
@@ -36,8 +34,8 @@ export default function Input({ placeholder, imgUrl, type,  ...props }) {
   <div>
   <InputDefault placeholder={placeholder} type={type}>
   </InputDefault>
-   <img src="" alt="teste"></img>
-  </div>
+  <i className="far fa-envelope-open"></i>
+</div>
   </>
   );
 }

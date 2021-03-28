@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Title>My page</Title>
       <Button href="/checkout" type="link">oi</Button>
-      <Input type="text"/>
+      <Input placeholder="Digite o seu e-mail" type="text"/>
     </>
   );
 }
