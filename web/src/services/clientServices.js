@@ -8,9 +8,16 @@ export default class clientServices{
         this.flowid = flowid;
     }
     
-    async getLoginAPI(params) {
+    async getClientAPI(params) {
         console.log("Estabelecendo conexão com o servidor...");
-        var auxResponse = 0;
+        const clientObj = { 
+            usuario,
+            email,
+            
+        };
+
+        clientObj.usuario = params.usuario;
+        clientObj.email = params.email;
     
         await api
         .get(`login/${params.userName}?usuario=${params.usuario}&senha=${params.senha}&flowid=${params.flowid}`)
@@ -21,15 +28,15 @@ export default class clientServices{
             console.log(error);
         });
 
-        return auxResponse;
+        return clientObj;
     }
   
-    async postClientToAPI(){
+    async postCreateClientAPI(params){
         console.log("Estabelecendo conexão com o servidor...");
         var auxResponse = 0;
     
         await api
-        .get(`login/${params.userName}?usuario=${params.usuario}&senha=${params.senha}&flowid=${params.flowid}`)
+        .post(`cadastrar/`,params)
         .then((response) => {
             auxResponse = response.status;
         })

@@ -46,14 +46,10 @@ export default function Button({text, alt, href, type, params, ...props }) {
   async function postClient(e, obj, href){
     e.preventDefault();
     var cliente = new servicosParaCliente(obj.userName, obj.usuario, obj.senha, obj.flowid);
-    console.log(obj.userName);
-    console.log(obj.usuario);
-    console.log(obj.senha);
-    console.log(obj.flowid);
-
-    var result = await cliente.getLoginAPI(cliente);
-
-    console.log(result);
+    
+    // -> MUDAR METODO DO CLIENTE PARA POSTCLIENT <- //
+    var result = await cliente.getClientAPI(cliente);
+    //////////////////////////////////////////////////
 
     if(result === 200){
       router.push(href);
