@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 import db from '../db.json';
 import Banner from '../src/components/Banner';
+import Container from '../src/components/Container';
 
 export default function Home() {
 
   return (
     <>
+    <Container>
+      <div className="center bg-dark-gray">
       <Banner 
         img_src="/bannerum.jpg"
         img_alt="Banner principal"
@@ -19,6 +22,8 @@ export default function Home() {
         button2_text={"Cadastrar"}
         button2_href={"/cadastrar"}
         />
+      </div>
+    </Container>
     </>
   );
 

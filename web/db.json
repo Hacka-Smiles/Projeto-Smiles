@@ -1,8 +1,8 @@
 {
     "title": "Nome da empresa",
     "description": "Conectando pessoas e eliminando barreiras",
-    "bg": "",
     "theme": {
+        "bg": "#191a1d",
         "colors": {
             "primary": "#ff5a00",
             "secondary": "#aeea00",

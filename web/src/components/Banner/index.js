@@ -3,11 +3,18 @@ import Button from '../../../src/components/Button';
 
 // Titulo e subtitulo (opcional)
 const BannerDefault = styled.div`
-margin-top: 10px;
+
   .container {
     position: relative;
-    width: 30%;
+    /* width: 30%; */
+    /* width: 100%; */
+    max-width: 900px;
     height: auto;
+    display: flex;
+
+    @media(max-width: 600px) {
+      flex-direction: column;
+    }
 
     &__box{
       display: flex;
@@ -15,9 +22,9 @@ margin-top: 10px;
       justify-content: center;
       align-items: flex-start;
       content: "";
-      position: absolute;
+      /* position: absolute; */
       width: 100%;
-      height: 99%;
+      height: auto;
       padding: 0 20px 0 40px;
       background: black;
       top: 0px;
@@ -29,10 +36,18 @@ margin-top: 10px;
       flex-direction: column;
       align-items: flex-start;
 
+      @media(max-width: 600px) {
+        flex-direction: row;
+      }
+
       button {
         min-width: 150px;
         padding: 10px 10px;
         margin-top: 15px;
+
+        @media(max-width: 600px) {
+          margin: 30px 30px 30px 0;
+        }
       }
     }
     h1, h2 {
@@ -59,7 +74,6 @@ export default function Banner({img_src, img_alt, img_title, width, height, titl
   return (
     <>
     <BannerDefault >
-      {/* <img src={img_src} width={width} height={height}/> */}
       <div className="container">
         <div className="container__box">
           <h1>{title !== undefined ? title : null}</h1>
