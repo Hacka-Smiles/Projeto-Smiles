@@ -5,15 +5,12 @@ import db from '../../db.json';
 import Button from '../../src/components/Button';
 import Banner from '../../src/components/Banner';
 
+
 export default function Navegar() {
   return (
     <ThemeProvider theme={db.theme}>
-      {/* <QuizScreen
-        externalQuestions={db.questions}
-        externalBg={db.bg}
-      /> */}
-      {/* <Banner img={""}></Banner> */}
-      <Button>Login</Button>
+      <Banner img_src="/bannerum.jpg" width="100%" height="auto"></Banner>
+      {/* <Button type="link">Login</Button> */}
     </ThemeProvider>
   );
 }
