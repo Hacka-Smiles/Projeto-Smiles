@@ -23,6 +23,7 @@ export default function Home() {
             button1_href={"/entrar"}
             button2_text={"Cadastrar"}
             button2_href={"/cadastrar"}
+            orientation={"default"}
             />
         </div>
           <Container.Block>
@@ -42,6 +43,7 @@ export default function Home() {
             subtitle={db.description} 
             button1_text={"Visualizar"}
             button1_href={"/"}
+            orientation={"column-reverse"}
             />
         </BlocoTexto.Container>
       </Container.Block>

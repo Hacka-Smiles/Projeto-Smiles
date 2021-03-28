@@ -70,11 +70,17 @@ const BannerDefault = styled.div`
 
 
 
-export default function Banner({img_src, img_alt, img_title, img_width, width, height, title, subtitle, button1_href, button2_href, button1_text, button2_text, ...props}) {
+export default function Banner({
+  img_src, img_alt, img_title, img_width,
+   width, height, 
+   title, subtitle, 
+   button1_href, button2_href, button1_text, button2_text, 
+   orientation,
+   ...props}) {
   return (
     <>
     <BannerDefault width={width}>
-      <div className="container">
+      <div className="container" orientation={orientation}>
         <div className="container__box">
           <h1>{title !== undefined ? title : null}</h1>
           <h2>{subtitle !== undefined ? subtitle : null}</h2>
