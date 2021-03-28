@@ -23,6 +23,10 @@ export default function Perfil() {
 
     <Navbar page="perfil"></Navbar>
     <IconeTexto icone={faEnvelopeOpen} text="Atributo de teste"></IconeTexto>
+
+    <div className="button-container">
+      <Button type="link" text="Editar perfil" href="/preferencias"></Button>
+    </div>
     </>
   );
 }
