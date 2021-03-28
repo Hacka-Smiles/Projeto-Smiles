@@ -11,6 +11,7 @@ const BannerDefault = styled.div`
     max-width: 900px;
     height: auto;
     display: flex;
+    flex-direction: ${(props) => props.orientation};
 
     @media(max-width: 600px) {
       flex-direction: column;
@@ -79,8 +80,8 @@ export default function Banner({
    ...props}) {
   return (
     <>
-    <BannerDefault width={width}>
-      <div className="container" orientation={orientation}>
+    <BannerDefault width={width} orientation={orientation}>
+      <div className="container" >
         <div className="container__box">
           <h1>{title !== undefined ? title : null}</h1>
           <h2>{subtitle !== undefined ? subtitle : null}</h2>

@@ -23,7 +23,7 @@ export default function Home() {
             button1_href={"/entrar"}
             button2_text={"Cadastrar"}
             button2_href={"/cadastrar"}
-            orientation={"default"}
+            orientation={"initial"}
             />
         </div>
           <Container.Block>
