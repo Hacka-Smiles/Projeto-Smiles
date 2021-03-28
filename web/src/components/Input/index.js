@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // Inputs: text, search, etc
 // Icone (opcional)
 
-const Input = styled.button`
+const InputDefault = styled.input`
   background-color: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.contrastText};
   border-radius: ${({ theme }) => theme.borderRadius};
@@ -20,7 +20,9 @@ const Input = styled.button`
   cursor: pointer;
   &:hover,
   &:focus {
-    opacity: .5;
+    :placeholder{
+      opacity:0.5;
+    };
   }
   &:disabled {
     background-color: #979797;
@@ -28,4 +30,14 @@ const Input = styled.button`
   }
 `;
 
-export default Input;
+export default function Input({ placeholder, imgUrl, type,  ...props }) {
+  return(
+  <>
+  <div>
+  <InputDefault placeholder={placeholder} type={type}>
+  </InputDefault>
+   <img src="" alt="teste"></img>
+  </div>
+  </>
+  );
+}

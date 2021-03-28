@@ -44,11 +44,11 @@ export default function Button({ alt, href, type, ...props }) {
   const router = useRouter()
 
   if (type = 'link') {
-
     return (
       <>
         <ButtonDefault alt={alt} onClick={(e) => linkTo(e, href, router)} className={infoAtivo} href={href}>testando</ButtonDefault>
       </>
     );
   }
+  return;
 }

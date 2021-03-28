@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Button from '../src/components/Button'
+import Input from '../src/components/Input'
+
 import { useRouter } from 'next/router';
 const Title = styled.h1`
   font-size: 50px;
@@ -12,6 +14,7 @@ export default function Home() {
     <>
       <Title>My page</Title>
       <Button href="/checkout" type="link">oi</Button>
+      <Input type="text"/>
     </>
   );
 }
