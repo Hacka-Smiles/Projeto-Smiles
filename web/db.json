@@ -42,21 +42,43 @@
     ],
     "destinos": [
         {
-            "local": "Empresa de Cão Guia",
-            "descricao": "Precisa de um cão guia na hora de viajar? Seu lugar é com a gente!",
-            "nota": "3.5",
-            "image": "/pcd.jpg",
+            "destino": "Brasil",
+            "descricao": "Tem vontade de conhecer este maravilhoso país da America do Sul?",
+            "nota": "2.5",
+            "image": "/brasil.jpg",
             "acessibilidade": [
                 {
                     "tipo": "Deficientes Visuais",
-                    "rating": "5"
+                    "rating": "1"
+                },
+                {
+                    "tipo": "Deficientes Auditivos",
+                    "rating": "2"
+                }
+            ],
+            
+            "caracteristicas": [{
+                "clima": "calor"
+            }
+            ],
+            "rating": "2"
+        },
+        {
+            "destino": "Austrália",
+            "descricao": "Viaje para este país conhecido pelos seus diversos animais silvestres",
+            "nota": "3.5",
+            "image": "/australia.jpg",
+            "acessibilidade": [
+                {
+                    "tipo": "Deficientes Visuais",
+                    "rating": "3"
                 },
                 {
                     "tipo": "Deficientes Auditivos",
                     "rating": "4"
                 }
             ],
-            "rating": "2"
+            "rating": "5"
         }
     ]
 }

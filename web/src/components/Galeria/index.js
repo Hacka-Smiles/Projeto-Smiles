@@ -23,15 +23,15 @@ export default function Galeria({imgArray, ...props}){
 
     return (
       <>
-  <div className="swiper-container swiper1">
-    <div className="swiper-wrapper">
-    {imgArray.map((img) => (
-       <div className="swiper-slide"> <img src= {img}></img></div>
-      ))}
+        <div className="swiper-container swiper1">
+          <div className="swiper-wrapper">
+          {imgArray.map((img) => (
+            <div className="swiper-slide"> <img src= {img}></img></div>
+            ))}
 
-    </div>
-    <div className="swiper-pagination swiper-pagination1"></div>
-  </div>
+          </div>
+          <div className="swiper-pagination swiper-pagination1"></div>
+        </div>
       </>
     );
 }

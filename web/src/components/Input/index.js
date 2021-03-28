@@ -35,11 +35,11 @@ const InputDefault = styled.input`
   }
 `;
 
-export default function Input({ placeholder, icone, type,  ...props }) {
+export default function Input({ placeholder, icone, type, onChange, ...props }) {
   return(
   <>
   <div className="input-container">
-  <InputDefault placeholder={placeholder} type={type}>
+  <InputDefault placeholder={placeholder} type={type} onChange={onChange}>
   </InputDefault>
   <FontAwesomeIcon icon={icone} style={{color: 'red'}} />
 </div>

@@ -65,4 +65,21 @@ Container.Form = styled.div`
   }
 `
 
+Container.Carousel = styled.div`
+  max-width: 600px;
+  position: relative;
+  margin: 30px auto;
+  height: auto;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  
+  .input-container {
+    width: 100%;
+  }
+  @media(max-width: 600px) {
+    flex-direction: column;
+  }
+`
+
 export default Container;

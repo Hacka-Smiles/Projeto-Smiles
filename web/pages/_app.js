@@ -27,6 +27,19 @@ const GlobalStyle = createGlobalStyle`
   .margin-0-auto {
     margin: 0 auto;
   }
+  .carousel {
+    img {
+    width: 100%;
+    height: auto;
+    }
+    .slide {
+      height: 400px;
+      .legend {
+        opacity: 0.85;
+      }
+    }
+  }
+
   /* h1 {
     font-size: 30px;
   } */
