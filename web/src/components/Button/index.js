@@ -16,6 +16,7 @@ const ButtonDefault = styled.button`
   outline: 0;
   transition: .3s;
   margin-top: 25px;
+  border: 1px solid white;
   cursor: pointer;
   &:hover,
   &:focus {
