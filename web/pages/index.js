@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Button from '../src/components/Banner'
+import Button from '../src/components/Button'
 import Input from '../src/components/Input'
 
 

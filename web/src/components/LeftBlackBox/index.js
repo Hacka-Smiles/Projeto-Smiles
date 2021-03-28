@@ -3,7 +3,7 @@ import Button from '../../../src/components/Button';
 
 // Titulo e subtitulo (opcional)
 const BannerDefault = styled(BannerDefault)`
-  .container {
+  div.container {
     position: relative;
     width: 30%;
     height: auto;
