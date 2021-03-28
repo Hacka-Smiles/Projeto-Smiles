@@ -15,6 +15,7 @@ export default function Estabelecimento() {
   
   let imgArray =  ['https://picsum.photos/500/300', 'https://picsum.photos/500/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300'];
   let mapsLink = `https://maps.google.com/maps?q=35.856737, 10.606619&z=15&output=embed`;
+  
   return (
     <>
   
@@ -24,8 +25,12 @@ export default function Estabelecimento() {
          <h2>Nome do Estabelecimento</h2>
     </div>
 
-    <Navbar page="perfil"></Navbar>
+    <Navbar></Navbar>
     <IconeTexto icone={faEnvelopeOpen} text="Atributo de teste"></IconeTexto>
+    <div className="button-container">
+         <Button type="link" text="Fazer reserva" href="/checkout?="></Button>
+    </div>
+
 
     </>
   );
