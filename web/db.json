@@ -30,13 +30,13 @@
         {
             "title": "Guias Turísticos",
             "subtitle": "É PCD? Conte com o auxílio de guias turísticos locais para explorar tudo que seu destino tem a oferecer.",
-            "image": "/smilesapp.jpg",
+            "image": "/guide.jpg",
             "url": "/"
         },
         {
             "title": "Compromisso com PCDs",
             "subtitle": "Saiba como tornamos as viagens mais acessíveis",
-            "image": "/smilesapp.jpg",
+            "image": "/pcd.jpg",
             "url": "/"
         }
     ]
