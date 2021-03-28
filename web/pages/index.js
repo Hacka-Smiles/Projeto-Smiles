@@ -1,4 +1,8 @@
 import styled from 'styled-components'
+import Button from '../src/components/Banner'
+import Input from '../src/components/Input'
+
+
 
 import { useRouter } from 'next/router';
 const Title = styled.h1`
@@ -7,7 +11,6 @@ const Title = styled.h1`
 `
 
 export default function Home() {
-<<<<<<< HEAD
 
   return (
     <>
@@ -18,7 +21,5 @@ export default function Home() {
 
     </>
   );
-=======
-  return <Title>My page</Title>
->>>>>>> c8512e979747087cd98ed93a88f719724d7b8665
+
 }
