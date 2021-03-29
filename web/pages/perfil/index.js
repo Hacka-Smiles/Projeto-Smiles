@@ -13,11 +13,15 @@ import { faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Perfil() {
-  let imgArray =  ['https://rciararaquara.com.br/wp-content/uploads/2019/12/deficiente.jpg'];
+  let imgArray =  [''];
 
   return (
     <>
-    <Galeria imgArray={imgArray}></Galeria>
+    <div class="button-container">
+
+    <img className="width" src= "https://rciararaquara.com.br/wp-content/uploads/2019/12/deficiente.jpg"></img>
+    </div>
+
     <div className="nome-cliente">
          <h2>Lucia dos Santos</h2>
     </div>
