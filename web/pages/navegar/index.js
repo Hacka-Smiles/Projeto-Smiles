@@ -53,25 +53,51 @@ export default function Navegar() {
     setListaFiltradaServicos(listaFiltradaServicos);
   }, [search, listaServicos]);
 
-  useEffect(() => {
-    var listaFiltradaServicos = listaServicos;
-    selectedFilterEstiloViagem.map((filtros_estilo) => {
+  // useEffect(() => {
+  //   var listaFiltradaServicos = listaServicos;
+  //   selectedFilterEstiloViagem.map((filtros_estilo) => {
+  //     console.log(filtros_estilo.value)
+  //   });
+  //   listaFiltradaServicos = listaServicos.filter((servico)=>{
+  //     return(
+  //       servico.filtros.acessibilidade.map((acessibilidade) => {
+  //         acessibilidade.value
+  //       })
+  //     .toLowerCase().search(filter) !== -1);
+  //   });
+  //   setListaFiltradaServicos(listaFiltradaServicos);
+  // }, [search, selectedFilterAcessibilidade, selectedFilterEstiloViagem]);
 
-      (filtros_estilo.value)
-    });
-    console.log()
-    if (search !== '') {
-        const filter = search.toLowerCase();
-        listaFiltradaServicos = listaServicos.filter((servico)=>{
-          return(
-            servico.filtros.acessibilidade.map((acessibilidade) => {
-              acessibilidade.value
-            })
-          .toLowerCase().search(filter) !== -1);
-        });
-    } 
-    setListaFiltradaServicos(listaFiltradaServicos);
-  }, [search, selectedFilterAcessibilidade, selectedFilterEstiloViagem]);
+
+
+
+  // useEffect(() => {
+  //   var listaFiltradaServicos = listaServicos;
+  //   selectedFilterEstiloViagem.map((filtros_estilo) => {
+
+      
+  //     (filtros_estilo.value)
+  //     listaFiltradaServicos = listaServicos.filter((servico)=>{
+  //       return(
+  //         servico.filtros.acessibilidade.map((acessibilidade) => {
+  //           acessibilidade.value
+  //         })
+  //       .toLowerCase().search(filter) !== -1);
+  //     });
+  //   });
+  //   console.log()
+  //   if (search !== '') {
+  //       const filter = search.toLowerCase();
+  //       listaFiltradaServicos = listaServicos.filter((servico)=>{
+  //         return(
+  //           servico.filtros.acessibilidade.map((acessibilidade) => {
+  //             acessibilidade.value
+  //           })
+  //         .toLowerCase().search(filter) !== -1);
+  //       });
+  //   } 
+  //   setListaFiltradaServicos(listaFiltradaServicos);
+  // }, [search, selectedFilterAcessibilidade, selectedFilterEstiloViagem]);
 
   // const filtroAcessibilidade = [
   //   { label: "Grapes 🍇", value: "grapes" },
