@@ -1,5 +1,10 @@
 import api from "../api";
 import Cliente from "../model/Cliente";
+import Cookies from 'js-cookie';
+
+function setSession(chave, valor){
+  Cookies.set(chave, valor)
+}
 
 export const consultarCliente = async (params) => {
   //ID do cliente
@@ -43,10 +48,13 @@ export const cadastrarCliente = async (params) => {
     .post("cliente", obj)
     .then((response) => {
       aux = response.status;
+      setSession("idCliente",response.data.idCliente);
     })
     .catch((error) => {
       console.log(error);
     });
+
+
 
   return aux;
 };
@@ -91,7 +99,9 @@ export const consultarClientId = async (params) => {
 
   await api
     .get("cliente", obj)
-    .then((response) => {})
+    .then((response) => {
+      setSession("idCliente",response.data.idCliente);
+    })
     .catch((error) => {
       console.log(error);
     });
