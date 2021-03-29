@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import Button from "../../src/components/Button";
 import Input from "../../src/components/Input";
 import styled from "styled-components";
+import Cookies from 'js-cookie';
 
 import IconeTexto from "../../src/components/IconeETexto";
 import { faEnvelopeOpen, faLock } from "@fortawesome/free-solid-svg-icons";
@@ -13,6 +14,10 @@ const Title = styled.h1`
   font-size: 50px;
   color: ${({ theme }) => theme.colors.primary};
 `;
+
+function setSession(chave, valor){
+  Cookies.set("idCliente","")
+}
 
 export default function Entrar() {
   const [usuario, setUsuario] = useState("");
@@ -44,7 +49,7 @@ export default function Entrar() {
         />
       </div>
       <div className="button-container">
-        <Button text="enviar" href="/checkout" type="login" params={{idCliente:"",usuario:usuario,senha:senha}}></Button>
+        <Button text="enviar" href="/navegar" type="link" params={{idCliente:Cookies.get("idCliente"),usuario:email,senha:senha}}></Button>
       </div>
     </>
   );

@@ -6,7 +6,7 @@ import {
   verificarSessao,
   cadastrarLogin
 } from "../../services/methods/authenticationServices";
-import { cadastrarCliente } from "../../services/methods/clientServices";
+import { cadastrarCliente, consultarClientId } from "../../services/methods/clientServices";
 
 const ButtonDefault = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
@@ -63,7 +63,8 @@ export default function Button({ text, alt, href, type, params, ...props }) {
 
   const logarCliente = async (e,obj,href) => {
     e.preventDefault();
-    console.log("BUTTON:" + obj);
+    console.log(obj);
+    await consultarClientId(obj);
     var result = await iniciarSessaoAPI(obj);
 
     if (result === 200) {
