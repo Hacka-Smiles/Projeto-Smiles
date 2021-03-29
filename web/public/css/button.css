@@ -45,7 +45,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     flex-direction: column;
     border-width: 0 2px 0 2px;
     border-style: solid;
-    border-color: #394a6d;
+    border-color: #ff5a00;
 }
 .custom-select__trigger {
     position: relative;
@@ -55,14 +55,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 0 22px;
     font-size: 20px;
     font-weight: 300;
-    color: #3b3b3b;
+    color: #fff;
     height: 60px;
     line-height: 60px;
-    background: #ffffff;
+    background: transparent;
     cursor: pointer;
     border-width: 2px 0 2px 0;
     border-style: solid;
-    border-color: #394a6d;
+    border-color: #ff5a00;
 }
 .custom-options {
     position: absolute;
@@ -70,7 +70,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     top: 100%;
     left: 0;
     right: 0;
-    border: 2px solid #394a6d;
+    border: 2px solid #ff5a00;
     border-top: 0;
     background: #fff;
     transition: all 0.5s;
@@ -120,12 +120,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .arrow::before {
     left: -5px;
     transform: rotate(45deg);
-    background-color: #394a6d;
+    background-color: #ff5a00;
 }
 .arrow::after {
     left: 5px;
     transform: rotate(-45deg);
-    background-color: #394a6d;
+    background-color: #ff5a00;
 }
 .open .arrow::before {
     left: -5px;
@@ -138,4 +138,5 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 .margin-top{
     margin-top: 30px;
+    margin-bottom: 30px;
 }

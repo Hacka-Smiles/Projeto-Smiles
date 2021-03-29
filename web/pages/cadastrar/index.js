@@ -77,16 +77,16 @@ export default function Cadastrar() {
           Possui alguma deficiência?
       </h2>
         
-      <div class="custom-select-wrapper">
-    <div class="custom-select">
-        <div class="custom-select__trigger"><span>Tesla</span>
-            <div class="arrow"></div>
+      <div className="custom-select-wrapper">
+    <div className="custom-select">
+        <div className="custom-select__trigger"><span>Tesla</span>
+            <div className="arrow"></div>
         </div>
-        <div class="custom-options">
-            <span class="custom-option selected" data-value="tesla">Não</span>
-            <span class="custom-option" data-value="volvo">Visual</span>
-            <span class="custom-option" data-value="mercedes">Auditiva</span>
-            <span class="custom-option" data-value="mercedes">Motora</span>
+        <div className="custom-options">
+            <span className="custom-option selected" data-value="tesla">Não</span>
+            <span className="custom-option" data-value="volvo">Visual</span>
+            <span className="custom-option" data-value="mercedes">Auditiva</span>
+            <span className="custom-option" data-value="mercedes">Motora</span>
         </div>
     </div>
 </div>
