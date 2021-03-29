@@ -103,7 +103,11 @@ export default function Cadastrar() {
 </div>
       </div>
       <div className="button-container">
+<<<<<<< HEAD
         <Button text="enviar" href="/" type="postClient" params={{nome:nome,idade:idade,cpf:cpf,email:email,senha:senha, usuario: usuario}}/>
+=======
+        <Button text="enviar" href="/preferencias" type="postClient" params={{nome:nome,idade:idade,cpf:cpf,email:email,senha:senha}}/>
+>>>>>>> fc8c5cd285cda9aefcaf68fe3532480bdb2cdbd6
       </div>
 
       <script src="/js/select.js">
