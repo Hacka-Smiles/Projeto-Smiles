@@ -13,13 +13,13 @@ import { faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Perfil() {
-  let imgArray =  ['https://picsum.photos/500/300', 'https://picsum.photos/500/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300', 'https://picsum.photos/200/300'];
+  let imgArray =  ['https://rciararaquara.com.br/wp-content/uploads/2019/12/deficiente.jpg'];
 
   return (
     <>
     <Galeria imgArray={imgArray}></Galeria>
     <div className="nome-cliente">
-         <h2>João da silva sauro</h2>
+         <h2>Lucia dos Santos</h2>
     </div>
 
     <Navbar page="perfil"></Navbar>
@@ -33,9 +33,7 @@ export default function Perfil() {
 
 
 
-    <div className="button-container">
-      <Button type="link" text="Editar perfil" href="/preferencias"></Button>
-    </div>
+
     </>
   );
 }

@@ -5,8 +5,8 @@ import db from '../../db.json';
 import Button from '../../src/components/Button';
 
 export default function Checkout() {
-  let titulo = 'Nome do hotel';
-  let descricao = 'descricao do hotel';
+  let titulo = 'Restaurante sabor de SP';
+  let descricao = 'loren ipsum loren ipsum loren ipsum loren ipsumloren ipsumloren ipsumloren ipsumloren ipsumloren ipsumloren ipsumloren ipsum';
   let preco = 'R$60,00 ou 4000 Smiles';
   let img = '/restaurante.jpg';
   return (
