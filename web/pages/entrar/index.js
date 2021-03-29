@@ -8,13 +8,14 @@ import styled from "styled-components";
 import IconeTexto from "../../src/components/IconeETexto";
 import { faEnvelopeOpen, faLock } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../../src/components/Navbar";
+
 const Title = styled.h1`
   font-size: 50px;
   color: ${({ theme }) => theme.colors.primary};
 `;
 
 export default function Entrar() {
-  const [email, setEmail] = useState("");
+  const [usuario, setUsuario] = useState("");
   const [senha, setSenha] = useState("");
 
   return (
@@ -28,10 +29,10 @@ export default function Entrar() {
         <Input
           icone={faEnvelopeOpen}
           placeholder="Digite aqui o seu e-mail"
-          onChange={(event) => setEmail(event.target.value)}
+          onChange={(event) => setUsuario(event.target.value)}
           type="text"
-          id="email"
-          value={email}
+          id="usuario"
+          value={usuario}
         />
         <Input
           icone={faLock}
@@ -43,7 +44,7 @@ export default function Entrar() {
         />
       </div>
       <div className="button-container">
-        <Button text="enviar" href="/checkout" type="login" params={{email:email,senha:senha}}></Button>
+        <Button text="enviar" href="/checkout" type="login" params={{idCliente:"",usuario:usuario,senha:senha}}></Button>
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import api from "./api";
+import api from "../api";
 import Carrinho from "../model/Carrinho";
 
 export const criarCarrinho = async (params) => {

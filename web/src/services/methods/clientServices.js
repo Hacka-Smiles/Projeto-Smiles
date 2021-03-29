@@ -1,9 +1,11 @@
+import apiCliente from "../api-cliente";
 import api from "../api";
 import Cliente from "../model/Cliente";
+import Login from "../model/Login";
 
 export const consultarCliente = async (params) => {
   //ID do cliente
-  await api
+  await apiCliente
     .get(`cliente/${params.clientId}`)
     .then((response) => {})
     .catch((error) => {
@@ -39,7 +41,7 @@ export const cadastrarCliente = async (params) => {
 
   var aux = 0;
 
-  await api
+  await apiCliente
     .post("cliente", obj)
     .then((response) => {
       aux = response.status;
@@ -75,7 +77,7 @@ export const atualizarCliente = async (params) => {
     params.PrincipalEmail != null ? params.PrincipalEmail : ""
   );
 
-  await api
+  await apiCliente
     .patch(`cliente/${params.clientId}`, obj)
     .then((response) => {})
     .catch((error) => {
@@ -88,20 +90,24 @@ export const atualizarCliente = async (params) => {
 export const consultarClientId = async (params) => {
   //Objeto Login
   const obj = new Login(params.idCliente, params.usuario, params.senha);
+  console.log("CHEGOU AQUI " + params);
 
   await api
-    .get("cliente", obj)
-    .then((response) => {})
+    .post("login/clientId", obj)
+    .then((response) => {
+      obj.idCliente = response.data.idCliente;
+      console.log(obj.idCliente);
+    })
     .catch((error) => {
       console.log(error);
     });
 
-  return;
+  return obj;
 };
 
 export const excluirCliente = async (params) => {
   //ID do cliente
-  await api
+  await apiCliente
     .delete(`cliente/${params.idCliente}`)
     .then((response) => {})
     .catch((error) => {

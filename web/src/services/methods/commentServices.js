@@ -1,4 +1,4 @@
-import api from "./api";
+import api from "../api";
 import Comentario from "../model/Comentario";
 
 export const criarComentario = async (params) => {

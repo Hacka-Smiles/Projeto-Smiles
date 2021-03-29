@@ -52,7 +52,6 @@ export default function Button({ text, alt, href, type, params, ...props }) {
     e.preventDefault();
     console.log(obj);
     obj.idCliente = "";
-    obj.senha = md5(obj.senha);
     var result_0 = await cadastrarLogin(obj);
     obj.idCliente = result_0.idCliente;
     var result = await cadastrarCliente(obj);
@@ -62,9 +61,9 @@ export default function Button({ text, alt, href, type, params, ...props }) {
     }
   }
 
-  const loginClient = async (e,obj,href) => {
+  const logarCliente = async (e,obj,href) => {
     e.preventDefault();
-    console.log(obj);
+    console.log("BUTTON:" + obj);
     var result = await iniciarSessaoAPI(obj);
 
     if (result === 200) {
@@ -103,7 +102,7 @@ export default function Button({ text, alt, href, type, params, ...props }) {
       <>
         <ButtonDefault
           alt={alt}
-          onClick={(e) => loginClient(e, params, href)}
+          onClick={(e) => logarCliente(e, params, href)}
           className={infoAtivo}
           href={href}
         >
