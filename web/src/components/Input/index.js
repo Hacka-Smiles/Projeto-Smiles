@@ -33,6 +33,10 @@ const InputDefault = styled.input`
     background-color: #979797;
     cursor: not-allowed;
   }
+  ::placeholder{
+    color: white;
+    font-weight: normal;
+  }
 `;
 
 export default function Input({ placeholder, icone, type, onChange, ...props }) {

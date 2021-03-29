@@ -4,32 +4,9 @@ const Container = styled.div`
   /* background-color: ${({ theme }) => theme.bg}; */
   width: 100%;
   /* height: 100vh; */
+  width: ${(props) => props.width_desktop};
   @media(max-width: 768px) {
     width: ${(props) => props.width_mobile};
-  }
-
-  .d-flex {
-    display: flex;
-  }
-  .justify-content-center {
-    justify-content:center;
-  }
-  .align-items-center {
-    align-items:center;
-  }
-  .justify-flex-start-mobile {
-    @media(max-width: 768px) {
-        justify-content:flex-start;
-      }
-  }
-  .flex-direction-column{
-    flex-direction:column;
-  }
-  .text-center {
-    text-align:center;
-  }
-  .bg-dark-gray{
-    background-color: #090909;
   }
 `;
 
@@ -58,9 +35,13 @@ Container.Form = styled.div`
   justify-content: center;
   
   .input-container {
-    width: 100%;
+    width: -webkit-fill-available;
+    text-align: center;
+    @media(max-width: 768px) {
+      width: 77%;
+    }
   }
-  @media(max-width: 600px) {
+  @media(max-width: 768px) {
     flex-direction: column;
   }
 `
