@@ -1,53 +1,78 @@
-import api from './api';
-import Destino from '../model/Destino';
+import api from "./api";
+import Destino from "../model/Destino";
 
-export default class destinationServices{
-    async consultarDestino(params){
-        await api.get(`destino/${params.idDestino}`).then((response)=>{
+export const consultarDestino = async (params) => {
+  await api
+    .get(`destino/${params.idDestino}`)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-        }).catch((error)=>{
-            console.log(error);
-        });
+  return;
+};
 
-        return;
-    }
+export const cadastrarDestino = async (params) => {
+  //Objeto Destino
+  const obj = new Destino(
+    params.rating,
+    params.nome,
+    params.acessibilidade,
+    params.logradouro,
+    params.numero,
+    params.bairro,
+    params.cidade,
+    params.estado,
+    params.pais,
+    params.latitude,
+    params.longitude
+  );
 
-    async cadastrarDestino(params){
-        //Objeto Destino
-        const obj = new Destino(params.rating,params.nome,params.acessibilidade,params.logradouro,params.numero,params.bairro,params.cidade,params.estado,params.pais,params.latitude,params.longitude);
-        
-        await api.post(`destino`,obj).then((response)=>{
+  await api
+    .post(`destino`, obj)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-        }).catch((error)=>{
-            console.log(error);
-        });
+  return;
+};
 
-        return;
-    }
+export const atualizarDestino = async (params) => {
+  //Objeto Destino
+  const obj = new Destino(
+    params.rating,
+    params.nome,
+    params.acessibilidade,
+    params.logradouro,
+    params.numero,
+    params.bairro,
+    params.cidade,
+    params.estado,
+    params.pais,
+    params.latitude,
+    params.longitude
+  );
 
-    async atualizarDestino(params){
-        //Objeto Destino
-        const obj = new Destino(params.rating,params.nome,params.acessibilidade,params.logradouro,params.numero,params.bairro,params.cidade,params.estado,params.pais,params.latitude,params.longitude);
-        
-        await api.patch(`destino/${params.idDestino}`,obj).then((response)=>{
+  await api
+    .patch(`destino/${params.idDestino}`, obj)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-        }).catch((error)=>{
-            console.log(error);
-        });
+  return;
+};
 
-        return;
-    }
+export const excluirDestino = async (params) => {
+  //ID do destino
 
-    async excluirDestino(params){
-        //ID do destino
+  await api
+    .delete(`destino/${params.idDestino}`)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-        await api.delete(`destino/${params.idDestino}`).then((response)=>{
-
-        }).catch((error)=>{
-            console.log(error);
-        });
-
-        return;
-    }
-
-}
+  return;
+};

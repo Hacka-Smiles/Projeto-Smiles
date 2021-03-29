@@ -13,8 +13,6 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
 `
 
-
-
 export default function Entrar() {
   const obj = {
     userName: "Bobby",

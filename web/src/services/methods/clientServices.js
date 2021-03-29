@@ -1,8 +1,7 @@
 import api from "../api";
 import Cliente from "../model/Cliente";
 
-export default class clientServices {
-  async consultarCliente(params) {
+export const consultarCliente = async (params) => {
     //ID do cliente
     await api
       .get(`cliente/${params.clientId}`)
@@ -14,7 +13,7 @@ export default class clientServices {
     return;
   }
 
-  async cadastrarCliente(params) {
+  export const cadastrarCliente = async (params) => {
     //Objeto Cliente
     const obj = new Cliente(
       params.clientId,
@@ -51,7 +50,7 @@ export default class clientServices {
     return;
   }
 
-  async atualizarCliente(params) {
+  export const atualizarCliente = async (params) => {
     //Objeto Cliente
     const obj = new Cliente(
       params.clientId,
@@ -86,7 +85,7 @@ export default class clientServices {
     return;
   }
 
-  async consultarClientId(params) {
+  export const consultarClientId = async (params) => {
     //Objeto Login
     const obj = new Login(params.idCliente, params.usuario, params.senha);
 
@@ -102,7 +101,7 @@ export default class clientServices {
     return;
   }
 
-  async excluirCliente(params) {
+  export const excluirCliente = async (params) => {
     //ID do cliente
     await api
       .delete(`cliente/${params.idCliente}`)
@@ -113,5 +112,3 @@ export default class clientServices {
 
     return;
   }
-
-}

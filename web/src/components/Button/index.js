@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { iniciarSessaoAPI, verificarSessao } from "../../services/methods/authenticationServices";
+import {
+  iniciarSessaoAPI,
+  verificarSessao,
+} from "../../services/methods/authenticationServices";
+import { cadastrarCliente } from "../../services/methods/clientServices";
 
 const ButtonDefault = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
@@ -45,7 +49,7 @@ export default function Button({ text, alt, href, type, params, ...props }) {
 
   async function postClient(e, obj, href) {
     e.preventDefault();
-    var result = verificarSessao(obj);
+    var result = await cadastrarCliente(obj);
 
     // -> MUDAR METODO DO CLIENTE PARA POSTCLIENT <- //
     // var result = await cliente.getClientAPI(cliente);
