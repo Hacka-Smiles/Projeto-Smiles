@@ -6,7 +6,8 @@ import Button from '../../src/components/Button';
 import Navbar from '../../src/components/Navbar';
 import Galeria from '../../src/components/Galeria';
 import IconeTexto from '../../src/components/IconeETexto';
-import { faEnvelopeOpen, faHighlighter } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelopeOpen, faFlag, faHighlighter, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -23,6 +24,14 @@ export default function Perfil() {
 
     <Navbar page="perfil"></Navbar>
     <IconeTexto icone={faEnvelopeOpen} text="Atributo de teste"></IconeTexto>
+
+    <IconeTexto icone={faFlag} text="Brasil"></IconeTexto>
+
+
+    <IconeTexto icone={faAccessibleIcon} text="Acessibilidade"></IconeTexto>
+
+
+
 
     <div className="button-container">
       <Button type="link" text="Editar perfil" href="/preferencias"></Button>

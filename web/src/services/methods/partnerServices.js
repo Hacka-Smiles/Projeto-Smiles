@@ -1,9 +1,9 @@
-import api from "./api";
+import api from "../api";
 import Local from "../model/Local";
 
 export const consultarLocal = async (params) => {
   await api
-    .get(`local/${params.idLocal}`)
+    .get(`local/${params}`)
     .then((response) => {})
     .catch((error) => {
       console.log(error);
