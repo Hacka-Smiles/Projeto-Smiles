@@ -54,12 +54,12 @@ export default function Navegar() {
   }, [search, listaServicos]);
 
   useEffect(() => {
-    // var listaFiltradaServicos = listaServicos;
-    // selectedFilterEstiloViagem.map((filtros_estilo) => {
+    var listaFiltradaServicos = listaServicos;
+    selectedFilterEstiloViagem.map((filtros_estilo) => {
 
-    //   (filtros_estilo.value)
-    // });
-    // console.log()
+      (filtros_estilo.value)
+    });
+    console.log()
     if (search !== '') {
         const filter = search.toLowerCase();
         listaFiltradaServicos = listaServicos.filter((servico)=>{
@@ -115,7 +115,7 @@ export default function Navegar() {
                       "selectAll": "Selecionar Todos",
                       "selectSomeItems": "Clique aqui e selecione quantos itens quiser"
                     }}
-                  />
+                  /> 
                 </div>
                 <div className="mt-30">
                   <p><strong>Seu estilo de viagem</strong></p>
@@ -192,7 +192,7 @@ export default function Navegar() {
             {
               listaFiltradaDestinos.map((destino) => {
                 return (
-                  <div>
+                  <div> 
                       <img src={destino.image}/>
                       <div className="legend">
                         <h3>{destino.destino}</h3>
