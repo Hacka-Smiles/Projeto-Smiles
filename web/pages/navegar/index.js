@@ -3,6 +3,7 @@ import Banner from '../../src/components/Banner';
 import Container from '../../src/components/Container';
 import BlocoTexto from '../../src/components/BlocoTexto';
 import Input from '../../src/components/Input';
+import Navbar from '../../src/components/Navbar';
 import { useRouter } from 'next/router';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
@@ -175,8 +176,18 @@ export default function Navegar() {
                 <Container.Block onClick={(e) => linkTo(e, servico.url, router)}>
                   <BlocoTexto.Container className="cursor-pointer d-flex flex-direction-column align-items-center">
                     <BlocoTexto width="400px">
-                      <h2>{servico.local}</h2>
+                      <h2 className="font-size-20px"><strong>{servico.local}</strong></h2>
                       <p>{servico.descricao}</p>
+                      <p><strong>Categoria:</strong> {servico.categoria}</p>
+                      <p><strong>Localização:</strong> {servico.cidade} - {servico.estado}, {servico.pais} </p>
+                      <p><strong>Nota:</strong> {servico.nota} </p>
+                      <p><strong>Nota Acessibilidade:</strong></p>
+                        {servico.acessibilidade.map((acessibilidade) => {
+                          return (
+                            `${acessibilidade.tipo}:  ${acessibilidade.rating}, `
+                            )
+                        })} 
+                      <br/>
                     </BlocoTexto>
                     <Banner 
                       img_src={servico.image}
@@ -232,6 +243,7 @@ export default function Navegar() {
         </Container.Carousel>
       </Container>
       </div>
+      <Navbar/>
     </div>
   );
 }

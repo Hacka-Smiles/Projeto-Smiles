@@ -71,7 +71,9 @@ const GlobalStyle = createGlobalStyle`
   .mt-30{
     margin-top:30px;
   }
-
+  .font-size-20px{
+    font-size: 20px;
+  }
 
 
   .carousel {
