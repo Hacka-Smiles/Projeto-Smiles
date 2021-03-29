@@ -1,7 +1,12 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { iniciarSessaoAPI, verificarSessao } from "../../services/methods/authenticationServices";
+import {
+  iniciarSessaoAPI,
+  verificarSessao,
+  cadastrarLogin
+} from "../../services/methods/authenticationServices";
+import { cadastrarCliente } from "../../services/methods/clientServices";
 
 const ButtonDefault = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
@@ -43,13 +48,24 @@ export default function Button({ text, alt, href, type, params, ...props }) {
 
   const router = useRouter();
 
-  async function postClient(e, obj, href) {
+  const postClient = async (e, obj, href) => {
     e.preventDefault();
-    var result = verificarSessao(obj);
+    console.log(obj);
+    obj.idCliente = "";
+    obj.senha = md5(obj.senha);
+    var result_0 = await cadastrarLogin(obj);
+    obj.idCliente = result_0.idCliente;
+    var result = await cadastrarCliente(obj);
 
-    // -> MUDAR METODO DO CLIENTE PARA POSTCLIENT <- //
-    // var result = await cliente.getClientAPI(cliente);
-    //////////////////////////////////////////////////
+    if (result === 200) {
+      router.push(href);
+    }
+  }
+
+  const loginClient = async (e,obj,href) => {
+    e.preventDefault();
+    console.log(obj);
+    var result = await iniciarSessaoAPI(obj);
 
     if (result === 200) {
       router.push(href);
@@ -82,6 +98,20 @@ export default function Button({ text, alt, href, type, params, ...props }) {
         </ButtonDefault>
       </>
     );
+  } else if(type == "login"){
+    return (
+      <>
+        <ButtonDefault
+          alt={alt}
+          onClick={(e) => loginClient(e, params, href)}
+          className={infoAtivo}
+          href={href}
+        >
+          {text}
+        </ButtonDefault>
+      </>
+    );
   }
+
   return;
 }

@@ -1,54 +1,59 @@
-import api from './api';
-import Comentario from '../model/Comentario'
+import api from "./api";
+import Comentario from "../model/Comentario";
 
-export default class commentServices{
-    async criarComentario(params){
-        //ID do Comentario
-        
-        await api.post(`comentario`,obj).then((response)=>{
+export const criarComentario = async (params) => {
+  //ID do Comentario
 
-        }).catch((error)=>{
-            console.log(error);
-        });
+  await api
+    .post(`comentario`, obj)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-        return;
-    }
+  return;
+};
 
-    async consultarComentario(params){
-        //ID do Comentario
-        
-        await api.get(`comentario/${params.idComentario}`).then((response)=>{
+export const consultarComentario = async (params) => {
+  //ID do Comentario
 
-        }).catch((error)=>{
-            console.log(error);
-        });
+  await api
+    .get(`comentario/${params.idComentario}`)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-        return;
-    }
+  return;
+};
 
-    async atualizarItem(params){
-        //Objeto Comentario
-        const obj = new Comentario(params.idComentario, params.comentario, params.idCliente);
-        
-        await api.patch(`comentario/${params.idComentario}`,obj).then((response)=>{
+export const atualizarItem = async (params) => {
+  //Objeto Comentario
+  const obj = new Comentario(
+    params.idComentario,
+    params.comentario,
+    params.idCliente
+  );
 
-        }).catch((error)=>{
-            console.log(error);
-        });
+  await api
+    .patch(`comentario/${params.idComentario}`, obj)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-        return;
-    }
+  return;
+};
 
-    async excluirItem(params){
-        //ID do Comentario
-        
-        await api.delete(`comentario/${params.idComentario}`,params).then((response)=>{
+export const excluirItem = async (params) => {
+  //ID do Comentario
 
-        }).catch((error)=>{
-            console.log(error);
-        });
+  await api
+    .delete(`comentario/${params.idComentario}`, params)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-        return;
-    }
-
-}
+  return;
+};
