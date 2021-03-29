@@ -40,7 +40,7 @@ export default function Navbar({page, ...props}){
     <NavbarDefault className="navbar">
       <ul>
         <li className={homeClass}>
-          <a href="/">
+          <a href="/navegar">
             <FontAwesomeIcon  icon={faHome} style={{color: 'white'}} />  
           </a> 
         </li>
