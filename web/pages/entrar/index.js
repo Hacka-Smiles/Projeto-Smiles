@@ -48,7 +48,7 @@ export default function Entrar() {
         />
       </div>
       <div className="button-container">
-        <Button text="enviar" href="/navegar" type="login" params={{idCliente:Cookies.get("idCliente"),usuario:email,senha:senha}}></Button>
+        <Button text="enviar" href="/navegar" type="link" params={{idCliente:Cookies.get("idCliente"),usuario:email,senha:senha}}></Button>
       </div>
     </>
   );

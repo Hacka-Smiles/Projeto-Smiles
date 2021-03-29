@@ -7,8 +7,8 @@ import Button from '../../src/components/Button';
 export default function Checkout() {
   let titulo = 'Nome do hotel';
   let descricao = 'descricao do hotel';
-  let preco = 'R$500,00';
-  let img = 'https://picsum.photos/500/300';
+  let preco = 'R$60,00 ou 4000 Smiles';
+  let img = '/restaurante.jpg';
   return (
     <>
     <div className="padding-box">
@@ -23,7 +23,7 @@ export default function Checkout() {
       <span>{preco}</span>
       </div>
       <div className="button-container">
-        <Button type="link" text="Comprar" href="/sucessoCompra"></Button>
+        <Button type="link" text="Comprar" href="/navegar"></Button>
       </div>
     </div>
     </div>
