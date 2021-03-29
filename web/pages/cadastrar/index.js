@@ -72,10 +72,32 @@ export default function Cadastrar() {
           placeholder="Digite aqui a sua senha novamente"
           type="password"
         />
+
+      <h2 className="margin-top">
+          Possui alguma deficiência?
+      </h2>
+        
+      <div className="custom-select-wrapper">
+    <div className="custom-select">
+        <div className="custom-select__trigger"><span>Tesla</span>
+            <div className="arrow"></div>
+        </div>
+        <div className="custom-options">
+            <span className="custom-option selected" data-value="tesla">Não</span>
+            <span className="custom-option" data-value="volvo">Visual</span>
+            <span className="custom-option" data-value="mercedes">Auditiva</span>
+            <span className="custom-option" data-value="mercedes">Motora</span>
+        </div>
+    </div>
+</div>
       </div>
       <div className="button-container">
         <Button text="enviar" href="/preferencias" type="postClient" params={{nome:nome,idade:idade,cpf:cpf,email:email,senha:senha}}/>
       </div>
+
+      <script src="/js/select.js">
+          
+          </script>
     </>
   );
 }
