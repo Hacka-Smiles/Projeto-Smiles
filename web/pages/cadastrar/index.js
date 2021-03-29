@@ -1,11 +1,15 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
+
 import { ThemeProvider } from "styled-components";
 import db from "../../db.json";
 import Button from "../../src/components/Button";
 
 import Input from "../../src/components/Input";
 import styled from "styled-components";
+import axios from "axios";
+
+import md5 from "md5";
 
 import IconeTexto from "../../src/components/IconeETexto";
 import { faEnvelopeOpen, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
@@ -103,11 +107,7 @@ export default function Cadastrar() {
 </div>
       </div>
       <div className="button-container">
-<<<<<<< HEAD
         <Button text="enviar" href="/" type="postClient" params={{nome:nome,idade:idade,cpf:cpf,email:email,senha:senha, usuario: usuario}}/>
-=======
-        <Button text="enviar" href="/preferencias" type="postClient" params={{nome:nome,idade:idade,cpf:cpf,email:email,senha:senha}}/>
->>>>>>> fc8c5cd285cda9aefcaf68fe3532480bdb2cdbd6
       </div>
 
       <script src="/js/select.js">
