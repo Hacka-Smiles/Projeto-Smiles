@@ -62,6 +62,9 @@ const GlobalStyle = createGlobalStyle`
   .p-30 {
     padding: 30px;
   }
+  .m-30 {
+    margin: 30px;
+  }
   .width-50percent{
     width: 50%;
   }

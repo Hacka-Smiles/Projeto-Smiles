@@ -19,14 +19,19 @@ export default function Navegar() {
 
   const router = useRouter();
   const [ search, setSearch ] = useState("");
-  // const [ listaEstabelecimentos, setListaEstabelecimentos ] = useState(db.estabelecimentos);
-  // const [ listaFiltradaEstabelecimentos, setListaFiltradaEstabelecimento ] = useState("");
+  const [ listaServicos, setListaServicos ] = useState(db.servicos);
+  const [ listaFiltradaServicos, setListaFiltradaServicos ] = useState([]);
   const [ listaDestinos, setListaDestinos ] = useState(db.destinos);
   const [ listaFiltradaDestinos, setListaFiltradaDestinos ] = useState([]);
+
+  const filtroAcessibilidade = db.filtros.acessibilidade;
+  const filtroEstiloViagem = db.filtros.estilo_viagem;
+  const [selectedFilterAcessibilidade, setSelectedFilterAcessibilidade] = useState([]);
+  const [selectedFilterEstiloViagem, setSelectedFilterEstiloViagem] = useState([]);
+
   useEffect(() => {
     var listaFiltradaDestinos = listaDestinos;
     if (search !== '') {
-      console.log(search)
         const filter = search.toLowerCase();
         listaFiltradaDestinos = listaDestinos.filter((destino)=>{
           console.log(destino.destino)
@@ -36,8 +41,38 @@ export default function Navegar() {
     setListaFiltradaDestinos(listaFiltradaDestinos);
   }, [search, listaDestinos]);
 
-  const filtroAcessibilidade = db.filtros.acessibilidade;
-  const filtroEstiloViagem = db.filtros.estilo_viagem;
+  useEffect(() => {
+    var listaFiltradaServicos = listaServicos;
+    // console.log(selectedFilterEstiloViagem)
+    if (search !== '') {
+        const filter = search.toLowerCase();
+        listaFiltradaServicos = listaServicos.filter((servico)=>{
+          return(servico.pais.toLowerCase().search(filter) !== -1);
+        });
+    } 
+    setListaFiltradaServicos(listaFiltradaServicos);
+  }, [search, listaServicos]);
+
+  useEffect(() => {
+    // var listaFiltradaServicos = listaServicos;
+    // selectedFilterEstiloViagem.map((filtros_estilo) => {
+
+    //   (filtros_estilo.value)
+    // });
+    // console.log()
+    if (search !== '') {
+        const filter = search.toLowerCase();
+        listaFiltradaServicos = listaServicos.filter((servico)=>{
+          return(
+            servico.filtros.acessibilidade.map((acessibilidade) => {
+              acessibilidade.value
+            })
+          .toLowerCase().search(filter) !== -1);
+        });
+    } 
+    setListaFiltradaServicos(listaFiltradaServicos);
+  }, [search, selectedFilterAcessibilidade, selectedFilterEstiloViagem]);
+
   // const filtroAcessibilidade = [
   //   { label: "Grapes 🍇", value: "grapes" },
   //   { label: "Mango 🥭", value: "mango" },
@@ -50,22 +85,19 @@ export default function Navegar() {
   //   { label: "Peach 🍑", value: "peach" },
   // ];
 
-  const [selectedFilterAcessibilidade, setSelectedFilterAcessibilidade] = useState([]);
-  const [selectedFilterEstiloViagem, setSelectedFilterEstiloViagem] = useState([]);
-
   function handleInputChange(event) {
     setSearch(event.target.value);
   }
 
   return (
     <div className="margin-0-auto d-flex justify-content-center flex-direction-column-small-size">
-      <div className="margin-0-auto p-30 width-50percent d-flex justify-content-flex-start align-items-center flex-direction-column">
+      <div className="margin-0-auto m-30 width-50percent d-flex justify-content-flex-start align-items-center flex-direction-column">
         <Container width_desktop={"70%"} width_mobile={"fit-content"}>
             <Container.Form>
               <div className="cursor-pointer d-flex flex-direction-column align-items-center">
-                {/* <Input type="search" placeholder={"Digite aqui para onde você quer viajar"} icon={faSearch} onChange={(e) => handleInputChange(e)}/> */}
                 <h1>Estabelecimentos e Serviços</h1>
                 <p>Filtre por categorias como "Estilo de Viagem" e "Acessibilidade" para encontrar a experiência ideal para você!</p>
+                {/* <Input type="search" placeholder={"Digite aqui para onde você quer viajar"} icon={faSearch} onChange={(e) => handleInputChange(e)}/> */}
                 {/* <pre>{JSON.stringify(selectedFilterAcessibilidade)}</pre> */}
                 <div className="mt-30">
                   <p><strong>Acessibilidade</strong></p>
@@ -110,8 +142,37 @@ export default function Navegar() {
               </div>
             </Container.Form>
           </Container>
+          <Container width_mobile={"fit-content"}>
+          {
+            listaFiltradaServicos.map((servico) => {
+              return (
+                <Container.Block onClick={(e) => linkTo(e, servico.url, router)}>
+                  <BlocoTexto.Container className="cursor-pointer d-flex flex-direction-column align-items-center">
+                    <BlocoTexto width="400px">
+                      <h2>{servico.local}</h2>
+                      <p>{servico.descricao}</p>
+                    </BlocoTexto>
+                    <Banner 
+                      img_src={servico.image}
+                      img_alt={servico.title}
+                      img_title={servico.title} 
+                      img_width="400px" 
+                      width="400px" 
+                      height="auto" 
+                      // title={funcionalidade.title} 
+                      subtitle={servico.descricao} 
+                      // button1_text={"Visualizar"}
+                      // button1_href={"/"}
+                      orientation={"column-reverse"}
+                      />
+                  </BlocoTexto.Container>
+                </Container.Block>
+              )
+            })
+          }
+        </Container>
         </div>
-      <div className="margin-0-auto p-30 width-50percent d-flex justify-content-flex-start align-items-center flex-direction-column">
+      <div className="margin-0-auto m-30 width-50percent d-flex justify-content-flex-start align-items-center flex-direction-column">
         <Container width_desktop={"70%"} width_mobile={"fit-content"}>
           <Container.Form>
             <div className="cursor-pointer d-flex flex-direction-column align-items-center">
