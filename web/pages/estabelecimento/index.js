@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import db from '../../db.json';
 import Button from '../../src/components/Button';
@@ -9,7 +9,7 @@ import Navbar from '../../src/components/Navbar';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpen, faStar } from '@fortawesome/free-solid-svg-icons';
-
+import { consultarLocal } from '../../src/services/methods/partnerServices';
 import Cookies from 'js-cookie';
 
 
@@ -19,12 +19,16 @@ library.add(
   // more icons go here
 );
 
-
-function setSession(chave, valor){
-  Cookies.set(chave, valor)
+function getSession(){
+  return Cookies.get("idLocal");
 }
 
 export default function Estabelecimento() {
+  const obj = [];
+
+  useEffect(()=>{
+    obj = consultarLocal(getSession());
+  },[])
 
   setSession('token','teste');
   
