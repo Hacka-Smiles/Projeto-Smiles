@@ -52,6 +52,7 @@ export default function Button({ text, alt, href, type, params, ...props }) {
     e.preventDefault();
     console.log(obj);
     obj.idCliente = "";
+    obj.senha = md5(obj.senha);
     var result_0 = await cadastrarLogin(obj);
     obj.idCliente = result_0.idCliente;
     var result = await cadastrarCliente(obj);
