@@ -8,11 +8,13 @@ import Input from "../../src/components/Input";
 import styled from "styled-components";
 
 import IconeTexto from "../../src/components/IconeETexto";
-import { faEnvelopeOpen, faLock } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelopeOpen, faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../../src/components/Navbar";
 
 export default function Cadastrar() {
   const [nome, setNome] = useState("");
+  const [usuario, setUsuario] = useState("");
+
   const [idade, setIdade] = useState("");
   const [cpf, setCpf] = useState("");
   const [email, setEmail] = useState("");
@@ -26,16 +28,25 @@ export default function Cadastrar() {
         <h4>Slogan da emppresa</h4>
       </div>
       <div className="form-container">
+
         <Input
-          icone={faEnvelopeOpen}
+          icone={faUser}
           onChange={(event) => setNome(event.target.value)}
           placeholder="Digite aqui o seu nome"
           type="text"
           id="nome"
           value={nome}
         />
+            <Input
+          icone={faUser}
+          onChange={(event) => setUsuario(event.target.value)}
+          placeholder="Digite aqui o seu-nome de usuário"
+          type="text"
+          id="usuario"
+          value={email}
+        />
         <Input
-          icone={faEnvelopeOpen}
+          icone={faUser}
           onChange={(event) => setIdade(event.target.value)}
           placeholder="Digite aqui a sua idade"
           type="text"
@@ -43,7 +54,7 @@ export default function Cadastrar() {
           value={idade}
         />
         <Input
-          icone={faEnvelopeOpen}
+          icone={faUser}
           onChange={(event) => setCpf(event.target.value)}
           placeholder="Digite aqui o seu CPF"
           type="text"
@@ -79,20 +90,20 @@ export default function Cadastrar() {
         
       <div className="custom-select-wrapper">
     <div className="custom-select">
-        <div className="custom-select__trigger"><span>Tesla</span>
+        <div className="custom-select__trigger"><span>Não possuo</span>
             <div className="arrow"></div>
         </div>
         <div className="custom-options">
-            <span className="custom-option selected" data-value="tesla">Não</span>
-            <span className="custom-option" data-value="volvo">Visual</span>
-            <span className="custom-option" data-value="mercedes">Auditiva</span>
-            <span className="custom-option" data-value="mercedes">Motora</span>
+            <span className="custom-option selected" data-value="tesla">Não possuo</span>
+            <span className="custom-option" data-value="Visual">Visual</span>
+            <span className="custom-option" data-value="Auditiva">Auditiva</span>
+            <span className="custom-option" data-value="Motora">Motora</span>
         </div>
     </div>
 </div>
       </div>
       <div className="button-container">
-        <Button text="enviar" href="/" type="postClient" params={{nome:nome,idade:idade,cpf:cpf,email:email,senha:senha}}/>
+        <Button text="enviar" href="/" type="postClient" params={{nome:nome,idade:idade,cpf:cpf,email:email,senha:senha, usuario: usuario}}/>
       </div>
 
       <script src="/js/select.js">
