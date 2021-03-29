@@ -40,6 +40,74 @@
             "url": "/"
         }
     ],
+    "filtros": {
+        "acessibilidade": [
+            {
+                "label":"Piso tátil", 
+                "value": "piso_tatil"
+            },
+            {
+                "label":"Audiodescrições", 
+                "value": "audio_descricoes"
+            },
+            {
+                "label":"Cão Guia", 
+                "value": "cao_guia"
+            },
+            {
+                "label":"Pilares com braile", 
+                "value": "pilares_com_braile"
+            },
+            {
+                "label":"Atrações Sonoras", 
+                "value": "atracoes_sonoras"
+            },
+            {
+                "label":"Atrações Visuais", 
+                "value": "atracoes_visuais"
+            },
+            {
+                "label":"Braile", 
+                "value": "braile"
+            },
+            {
+                "label":"Rampas de Acesso", 
+                "value": "rampas_de_acesso"
+            },
+            {
+                "label":"Profissionais para te auxiliar", 
+                "value": "profissionais_para_te_auxiliar"
+            }
+        ],
+        "estilo_viagem": [
+            {
+                "label":"Ecoturismo", 
+                "value": "ecoturismo"
+            },{
+                "label":"Romântica", 
+                "value": "romantica"
+            },{
+                "label":"Cultural", 
+                "value": "cultural"
+            },{
+                "label":"Relaxante", 
+                "value": "relaxante"
+            },{
+                "label":"Em família", 
+                "value": "em_familia"
+            },{
+                "label":"Gastronômica", 
+                "value": "gastronomica"
+            },{
+                "label":"Aventureira", 
+                "value": "aventureira"
+            },{
+                "label":"Viajar sozinho", 
+                "value": "viajar_sozinho"
+            }
+            
+        ]
+    },
     "destinos": [
         {
             "destino": "Brasil",
@@ -55,11 +123,6 @@
                     "tipo": "Deficientes Auditivos",
                     "rating": "2"
                 }
-            ],
-            
-            "caracteristicas": [{
-                "clima": "calor"
-            }
             ],
             "rating": "2"
         },
@@ -79,6 +142,101 @@
                 }
             ],
             "rating": "5"
+        }
+    ],
+    "servicos": [
+        {
+            "local": "Restaurante Sabor de SP",
+            "categoria": "restaurante",
+            "pais": "Brasil",
+            "estado": "São Paulo",
+            "cidade": "Santo André",
+            "descricao": "Se vier visitar a cidade de São Paulo e precisar entrar com o seu cão guia, você encontrou o lugar certo! Também disponibilizamos nosso menus com braile.",
+            "nota": "2.5",
+            "image": "/restaurante.jpg",
+            "acessibilidade": [
+                {
+                    "tipo": "Deficientes Visuais",
+                    "rating": "5"
+                },
+                {
+                    "tipo": "Deficientes Auditivos",
+                    "rating": "5"
+                }
+            ],
+            "filtros": {
+                "acessibilidade": [
+                    {
+                        "label":"Piso tátil", 
+                        "value": "piso_tatil"
+                    },
+                    {
+                        "label":"Atrações Visuais", 
+                        "value": "atracoes_visuais"
+                    },
+                    {
+                        "label":"Braile", 
+                        "value": "braile"
+                    },{
+                        "label":"Cão Guia", 
+                        "value": "cao_guia"
+                    }
+                ],
+                "estilo_viagem": [
+                    {
+                        "label":"Em família", 
+                        "value": "em_familia"
+                    },{
+                        "label":"Gastronômica", 
+                        "value": "gastronomica"
+                    }
+                ]
+            },
+            "rating": "2"
+        },{
+            "local": "Instituto Jupiter Cão-Guia",
+            "categoria": "acessibilidade",
+            "pais": "Australia",
+            "estado": "Queensland",
+            "cidade": "Brisbane",
+            "descricao": "Precisa de um cão guia? Nós te ajudamos com isso!",
+            "nota": "2.5",
+            "image": "/caoguia.jpg",
+            "acessibilidade": [
+                {
+                    "tipo": "Deficientes Visuais",
+                    "rating": "5"
+                },
+                {
+                    "tipo": "Deficientes Auditivos",
+                    "rating": "0"
+                }
+            ],
+            "filtros": {
+                "acessibilidade": [
+                    {
+                        "label":"Piso tátil", 
+                        "value": "piso_tatil"
+                    },
+                    {
+                        "label":"Atrações Visuais", 
+                        "value": "atracoes_visuais"
+                    },{
+                        "label":"Cão Guia", 
+                        "value": "cao_guia"
+                    }
+                ],
+                "estilo_viagem": [
+                    {
+                        "label":"Em família", 
+                        "value": "em_familia"
+                    },{
+                        "label":"Gastronômica", 
+                        "value": "gastronomica"
+                    }
+                ]
+            },
+            "rating": "2"
         }
     ]
 }
