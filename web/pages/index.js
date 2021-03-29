@@ -28,7 +28,7 @@ export default function Home() {
           button1_text={"Entrar"}
           button1_href={"/entrar"}
           button2_text={"Cadastrar"}
-          button2_href={"/preferencias"}
+          button2_href={"/cadastrar"}
           orientation={"initial"}
           />
       </div>

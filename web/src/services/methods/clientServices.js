@@ -2,113 +2,111 @@ import api from "../api";
 import Cliente from "../model/Cliente";
 
 export const consultarCliente = async (params) => {
-    //ID do cliente
-    await api
-      .get(`cliente/${params.clientId}`)
-      .then((response) => {})
-      .catch((error) => {
-        console.log(error);
-      });
+  //ID do cliente
+  await api
+    .get(`cliente/${params.clientId}`)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-    return;
-  }
+  return;
+};
 
-  export const cadastrarCliente = async (params) => {
-    //Objeto Cliente
-    const obj = new Cliente(
-      params.clientId,
-      params.nome,
-      params.idade,
-      params.genero,
-      params.cpf,
-      params.token,
-      params.flowid,
-      params.logradouro,
-      params.numero,
-      params.bairro,
-      params.cidade,
-      params.estado,
-      params.pais,
-      params.principalEndereco,
-      params.cep,
-      params.ddi,
-      params.ddd,
-      params.telefone,
-      params.principalTelefone,
-      params.PrincipalEmail
-    );
+export const cadastrarCliente = async (params) => {
+  //Objeto Cliente
+  const obj = new Cliente(
+    params.nome != null ? params.nome : "",
+    params.idade != null ? params.idade : "",
+    params.genero != null ? params.genero : "",
+    params.cpf != null ? params.cpf : "",
+    params.token != null ? params.token : "",
+    params.flowid != null ? params.flowid : "",
+    params.logradouro != null ? params.logradouro : "",
+    params.numero != null ? params.numero : "",
+    params.bairro != null ? params.bairro : "",
+    params.cidade != null ? params.cidade : "",
+    params.estado != null ? params.estado : "",
+    params.pais != null ? params.pais : "",
+    params.principalEndereco != null ? params.principalEndereco : "",
+    params.cep != null ? params.cep : "",
+    params.ddi != null ? params.ddi : "",
+    params.ddd != null ? params.ddd : "",
+    params.telefone != null ? params.telefone : "",
+    params.principalTelefone != null ? params.principalTelefone : "",
+    params.PrincipalEmail != null ? params.PrincipalEmail : ""
+  );
 
-    await api
-      .post("cliente", obj)
-      .then((response) => {
+  var aux = 0;
 
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  await api
+    .post("cliente", obj)
+    .then((response) => {
+      aux = response.status;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 
-    return;
-  }
+  return aux;
+};
 
-  export const atualizarCliente = async (params) => {
-    //Objeto Cliente
-    const obj = new Cliente(
-      params.clientId,
-      params.nome,
-      params.idade,
-      params.genero,
-      params.cpf,
-      params.token,
-      params.flowid,
-      params.logradouro,
-      params.numero,
-      params.bairro,
-      params.cidade,
-      params.estado,
-      params.pais,
-      params.principalEndereco,
-      params.cep,
-      params.ddi,
-      params.ddd,
-      params.telefone,
-      params.principalTelefone,
-      params.PrincipalEmail
-    );
+export const atualizarCliente = async (params) => {
+  //Objeto Cliente
+  const obj = new Cliente(
+    params.nome != null ? params.nome : "",
+    params.idade != null ? params.idade : "",
+    params.genero != null ? params.genero : "",
+    params.cpf != null ? params.cpf : "",
+    params.token != null ? params.token : "",
+    params.flowid != null ? params.flowid : "",
+    params.logradouro != null ? params.logradouro : "",
+    params.numero != null ? params.numero : "",
+    params.bairro != null ? params.bairro : "",
+    params.cidade != null ? params.cidade : "",
+    params.estado != null ? params.estado : "",
+    params.pais != null ? params.pais : "",
+    params.principalEndereco != null ? params.principalEndereco : "",
+    params.cep != null ? params.cep : "",
+    params.ddi != null ? params.ddi : "",
+    params.ddd != null ? params.ddd : "",
+    params.telefone != null ? params.telefone : "",
+    params.principalTelefone != null ? params.principalTelefone : "",
+    params.PrincipalEmail != null ? params.PrincipalEmail : ""
+  );
 
-    await api
-      .patch(`cliente/${params.clientId}`, obj)
-      .then((response) => {})
-      .catch((error) => {
-        console.log(error);
-      });
+  await api
+    .patch(`cliente/${params.clientId}`, obj)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-    return;
-  }
+  return;
+};
 
-  export const consultarClientId = async (params) => {
-    //Objeto Login
-    const obj = new Login(params.idCliente, params.usuario, params.senha);
+export const consultarClientId = async (params) => {
+  //Objeto Login
+  const obj = new Login(params.idCliente, params.usuario, params.senha);
 
-    await api
-      .get("cliente", obj)
-      .then((response) => {
-        
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  await api
+    .get("cliente", obj)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-    return;
-  }
+  return;
+};
 
-  export const excluirCliente = async (params) => {
-    //ID do cliente
-    await api
-      .delete(`cliente/${params.idCliente}`)
-      .then((response) => {})
-      .catch((error) => {
-        console.log(error);
-      });
+export const excluirCliente = async (params) => {
+  //ID do cliente
+  await api
+    .delete(`cliente/${params.idCliente}`)
+    .then((response) => {})
+    .catch((error) => {
+      console.log(error);
+    });
 
-    return;
-  }
+  return;
+};

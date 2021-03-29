@@ -74,7 +74,7 @@ export default function Cadastrar() {
         />
       </div>
       <div className="button-container">
-        <Button text="enviar" href="/" type="postClient" params={{nome:nome,idade:idade,cpf:cpf,email:email,senha:senha}}/>
+        <Button text="enviar" href="/preferencias" type="postClient" params={{nome:nome,idade:idade,cpf:cpf,email:email,senha:senha}}/>
       </div>
     </>
   );
