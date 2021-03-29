@@ -148,6 +148,7 @@
         {
             "local": "Restaurante Sabor de SP",
             "categoria": "restaurante",
+            "url": "/estabelecimento",
             "pais": "Brasil",
             "estado": "São Paulo",
             "cidade": "Santo André",
@@ -196,6 +197,7 @@
         },{
             "local": "Instituto Jupiter Cão-Guia",
             "categoria": "acessibilidade",
+            "url": "/estabelecimento",
             "pais": "Australia",
             "estado": "Queensland",
             "cidade": "Brisbane",
